@@ -4,3 +4,6 @@
 [submodule "stack-dockge"]
 	path = stack-dockge
 	url = https://github.com/shahvirb/stack-dockge.git
+[submodule "stack-watchtower"]
+	path = stack-watchtower
+	url = https://github.com/shahvirb/stack-watchtower

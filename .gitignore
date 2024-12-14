@@ -1,0 +1,2 @@
+# Ignore these because they contain secrets
+stack-openproject/.env

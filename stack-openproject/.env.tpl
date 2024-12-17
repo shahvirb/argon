@@ -7,8 +7,8 @@
 #   https://www.openproject.org/docs/installation-and-operations/configuration/environment/
 #
 TAG=14-slim
-OPENPROJECT_HTTPS=false
-OPENPROJECT_HOST__NAME=argon
+OPENPROJECT_HTTPS=true
+OPENPROJECT_HOST__NAME=openproject.fdatxvault.win
 PORT=8080
 OPENPROJECT_RAILS__RELATIVE__URL__ROOT=
 IMAP_ENABLED=false

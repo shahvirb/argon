@@ -1,0 +1,8 @@
+services:
+  proxy:
+    profiles:
+      - disabled
+
+  web:
+    ports:
+      - "${PORT:-8080}:8080"

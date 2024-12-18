@@ -1,0 +1,28 @@
+services:
+  unificontroller:
+    container_name: unificontroller
+    environment:
+      PGID: "${PGID}"
+      PUID: "${PUID}"
+      TZ: "${TZ}"
+    image: lscr.io/linuxserver/unifi-controller:latest
+    logging:
+      driver: json-file
+      options:
+        max-file: ${DOCKERLOGGING_MAXFILE}
+        max-size: ${DOCKERLOGGING_MAXSIZE}
+        labels-regex: "^.+"
+    ports:
+      - "3478:3478/udp"
+      - "6789:6789"
+      - "8080:8080"
+      - "8081:8081"
+      - "8443:8443"
+      - "8843:8843"
+      - "8880:8880"
+      - "10001:10001/udp"
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${DOCKERDATADIR}/unificontroller:/config
+

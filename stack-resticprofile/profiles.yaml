@@ -1,0 +1,34 @@
+global:
+  scheduler: crond
+
+home:
+  backup:
+    exclude-caches: true
+    one-file-system: true
+    schedule-permission: system
+    schedule: "*:00"
+    send-after:
+      - method: GET
+        url: http://monitor.fdatxvault.win:3001/api/push/fPMmwJugMx?status=up&msg=OK
+    send-after-fail:
+      - method: GET
+        url: http://monitor.fdatxvault.win:3001/api/push/fPMmwJugMx?status=down&msg=ERROR
+    source: "/home/shahvirb"
+    verbose: true
+  check:
+    schedule: "2:19"
+    schedule-permission: system
+  initialize: true
+  repository: "local:/backups/primary"
+  restic-stale-lock-age: 1h
+  force-inactive-lock: true
+  retention:
+    after-backup: true
+    before-backup: false
+    keep-daily: 14
+    keep-weekly: 4
+    keep-monthly: 12
+    keep-within: 3d
+    prune: true
+    tag: true
+  password-file: pw.key

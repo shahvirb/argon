@@ -1,0 +1,30 @@
+# COMMAND REFERENCE
+# profiles : to list all profiles
+# <job_name>.snapshots : to see what snapshots exist for a given job
+# <job_name>.status : to see the scheduling status for a given job
+# <job_name>.schedule : to schedule a job
+# <job_name>.unschedule : to unschedule a job
+
+# To debug inside the container
+# docker compose run -it --rm --entrypoint sh resticprofile
+
+services:
+  resticprofile:
+    command:
+      - '-c'
+      - 'resticprofile unschedule --all && resticprofile schedule --all && crond -f'
+    container_name: resticprofile
+    entrypoint: '/bin/sh'
+    environment:
+      - TZ=${TZ}
+    hostname: ${HOSTNAME}
+    image: creativeprojects/resticprofile:latest
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+      - './profiles.yaml:/etc/resticprofile/profiles.yaml:ro'
+      - './pw.key:/etc/resticprofile/pw.key:ro'
+      # home job
+      - '/mnt/ServerDataBackups:/backups'
+      - '/home/shahvirb:/home/shahvirb:ro'

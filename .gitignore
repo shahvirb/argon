@@ -1,2 +1,3 @@
 # Ignore these because they contain secrets
 stack-openproject/.env
+stack-resticprofile/pw.key

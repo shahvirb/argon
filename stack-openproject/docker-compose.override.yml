@@ -5,4 +5,4 @@ services:
 
   web:
     ports:
-      - "${PORT:-8080}:8080"
+      - "8079:${PORT:-8080}"

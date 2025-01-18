@@ -1,0 +1,3 @@
+# Inform host and port configuration
+1. We have changed the inform port in the docker container to be 8087. Ensure that this same port number is used in ```~/docker-data/unifinetwork/config/data/system.properties``` as well.
+2. Then SSH into each wireless AP and run ```set-inform http://argon:8087/inform```

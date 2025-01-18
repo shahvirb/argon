@@ -26,5 +26,5 @@ services:
       - './profiles.yaml:/etc/resticprofile/profiles.yaml:ro'
       - './pw.key:/etc/resticprofile/pw.key:ro'
       # home job
-      - '/mnt/ServerDataBackups:/backups'
+      - '/mnt/ServerDataBackups/primary:/mnt/ServerDataBackups/primary'
       - '/home/shahvirb:/home/shahvirb:ro'

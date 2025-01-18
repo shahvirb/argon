@@ -15,16 +15,22 @@ home:
         url: http://monitor.fdatxvault.win:3001/api/push/fPMmwJugMx?status=down&msg=ERROR
     source: "/home/shahvirb"
     verbose: true
+  # copy:
+  #   initialize: false
+  #   repository: "local:/backups/helium"
+  #   password-file: pw.key
+  #   # snapshot: latest
   check:
     schedule: "2:19"
     schedule-permission: system
   initialize: true
-  repository: "local:/backups/primary"
+  repository: "local:/mnt/ServerDataBackups/primary"
   restic-stale-lock-age: 1h
   force-inactive-lock: true
   retention:
     after-backup: true
     before-backup: false
+    host: true
     keep-daily: 14
     keep-weekly: 4
     keep-monthly: 12

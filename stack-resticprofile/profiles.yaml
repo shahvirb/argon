@@ -24,7 +24,7 @@ home:
     schedule: "2:19"
     schedule-permission: system
   initialize: true
-  repository: "local:/mnt/ServerDataBackups/primary"
+  repository: "local:/mnt/ServerDataBackups/argon"
   restic-stale-lock-age: 1h
   force-inactive-lock: true
   retention:

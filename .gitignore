@@ -2,3 +2,4 @@
 stack-openproject/.env
 stack-resticprofile/pw.key
 stack-unifinetwork/secrets.env
+stack-homepage/homepage/services.yaml

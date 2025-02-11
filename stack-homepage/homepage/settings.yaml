@@ -1,0 +1,28 @@
+title: "Home Lab Dashboard"
+theme: dark
+
+navbar:
+  links: []
+
+useEqualHeights: true
+
+layout:
+  - Health:
+      tab: Default
+  - Devices:
+      # columns: 4
+      tab: Default
+  - Other:
+      # columns: 4
+      tab: Default
+  - Web:
+      # columns: 4
+      tab: Default
+  - Media:
+      columns: 4
+      style: row
+      tab: Media
+  - Monitoring:
+      columns: 4
+      style: row
+      tab: Monitoring

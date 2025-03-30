@@ -1,5 +1,8 @@
 # Ignore these because they contain secrets
+stack-homepage/homepage/services.yaml
+stack-kestra/application.yaml
+stack-kestra/secrets.env
 stack-openproject/.env
 stack-resticprofile/pw.key
 stack-unifinetwork/secrets.env
-stack-homepage/homepage/services.yaml
+stack-tandoor/secrets-tandoor.env

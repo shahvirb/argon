@@ -5,6 +5,7 @@ services:
     environment:
       PGID: "${PGID}"
       PUID: "${PUID}"
+      HOMEPAGE_ALLOWED_HOSTS: "argon:8992"
     ports:
       - 8992:3000
     restart: unless-stopped

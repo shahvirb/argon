@@ -1,3 +1,5 @@
+stack-homepage/homepage/logs/
+
 # Ignore these because they contain secrets
 stack-homepage/homepage/services.yaml
 stack-kestra/application.yaml

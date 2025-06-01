@@ -25,9 +25,9 @@
             url: http://homeassistant.fdatxvault.win:8123
 
 - Devices:
-    - Proxmox:
+    - pmx3:
         icon: proxmox.png
-        href: https://pmx1:8006
+        href: https://pmx3:8006
     - Router:
         icon: router.png
         href: http://192.168.1.1

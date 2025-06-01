@@ -1,6 +1,6 @@
 datasources:
   postgres:
-    url: jdbc:postgresql://postgres:5432/kestra
+    url: jdbc:postgresql://localhost:5432/kestra
     driverClassName: org.postgresql.Driver
     username: kestra
     password: "op://Dev - Home Lab/Kestra/pgpass"

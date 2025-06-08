@@ -14,7 +14,3 @@ services:
       - ${DOCKERDATADIR}/netalertx/db:/app/db
       - type: tmpfs
         target: /app/api
-    # privileged: true
-    # cap_add:
-    #   - NET_ADMIN
-    #   - NET_RAW

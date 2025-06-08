@@ -1,0 +1,20 @@
+services:
+  netalertx:
+    container_name: netalertx
+    image: jokobsk/netalertx:latest
+    environment:
+      - TZ=${TZ}
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - PORT=20211
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/netalertx/config:/app/config
+      - ${DOCKERDATADIR}/netalertx/db:/app/db
+      - type: tmpfs
+        target: /app/api
+    # privileged: true
+    # cap_add:
+    #   - NET_ADMIN
+    #   - NET_RAW

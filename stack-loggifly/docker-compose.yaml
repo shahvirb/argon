@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   loggifly:
     container_name: loggifly

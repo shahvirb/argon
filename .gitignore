@@ -4,7 +4,8 @@ stack-homepage/homepage/logs/
 stack-homepage/homepage/services.yaml
 stack-kestra/application.yaml
 stack-kestra/secrets.env
+stack-loggifly/loggifly/config.yaml
 stack-openproject/.env
 stack-resticprofile/pw.key
-stack-unifinetwork/secrets.env
 stack-tandoor/secrets-tandoor.env
+stack-unifinetwork/secrets.env

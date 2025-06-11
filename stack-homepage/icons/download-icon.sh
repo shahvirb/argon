@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check if a parameter was provided
 if [ "$#" -ne 1 ]; then
@@ -7,7 +7,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 ICON_NAME="$1"
-URL="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/${ICON_NAME}.png"
+URL="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/${ICON_NAME}.png"
 
 # Use wget to download the icon
 wget "$URL"

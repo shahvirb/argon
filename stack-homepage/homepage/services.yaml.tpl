@@ -160,6 +160,10 @@
         icon: influxdb.png
         href: http://helium:8086
         description: Time Series Database
+    - NetAlertX:
+        icon: netalertx.png
+        href: http://argon:20211
+        description: Network Device Monitoring
     - Portainer:
         icon: portainer.png
         href: http://monitor:9000
@@ -187,12 +191,15 @@
 
 - Other:
     - Change Detection:
-        icon: changedetection-io.png
+        icon: changedetection.png
         href: http://argon:5000
         description: Website Change Detection
     - Cronicle:
-        icon: mdi-clock-outline
+        icon: cronicle.png
         href: http://mediaserver2:3012
+    - Forgejo:
+        icon: forgejo.png
+        href: http://argon:3000
     - Paperless:
         icon: paperless.png
         href: http://helium:8000
@@ -225,7 +232,7 @@
         icon: openproject.png
         href: https://openproject.fdatxvault.win
     - Tandoor Recipes:
-        icon: tandoor.png
+        icon: tandoor-recipes.png
         href: https://recipes.fdatxvault.win
     - Vikunja:
         icon: vikunja.png

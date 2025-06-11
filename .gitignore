@@ -1,6 +1,7 @@
 stack-homepage/homepage/logs/
 
 # Ignore these because they contain secrets
+stack-forgejo/secrets-forgejo.env
 stack-homepage/homepage/services.yaml
 stack-kestra/application.yaml
 stack-kestra/secrets.env

@@ -160,6 +160,10 @@
         icon: influxdb.png
         href: http://helium:8086
         description: Time Series Database
+    - Komodo:
+        icon: komodo.png
+        href: http://argon:9120/
+        description: Container Management Platform
     - NetAlertX:
         icon: netalertx.png
         href: http://argon:20211

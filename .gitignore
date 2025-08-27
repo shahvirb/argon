@@ -5,6 +5,7 @@ stack-forgejo/secrets-forgejo.env
 stack-homepage/homepage/services.yaml
 stack-kestra/application.yaml
 stack-kestra/secrets.env
+stack-komodo/compose.env
 stack-loggifly/loggifly/config.yaml
 stack-openproject/.env
 stack-resticprofile/pw.key

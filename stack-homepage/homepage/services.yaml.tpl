@@ -43,10 +43,10 @@
             # site: Site Name # optional
     - 3D Printer:
         icon: mdi-printer-3d-nozzle
-        href: http://mkspi:10088
+        href: http://192.168.1.217:10088
         # widget:
         #     type: moonraker
-        #     url: http://mkspi:10088
+        #     url: http://192.168.1.217:10088
 
 - Media:
     - Audiobookshelf:

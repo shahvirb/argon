@@ -1,0 +1,15 @@
+services:
+  open-webui:
+    container_name: open-webui
+    image: ghcr.io/open-webui/open-webui:ollama
+    environment:
+      - TZ=${TZ}
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - WEBUI_AUTH="False"
+    ports:
+      - "3001:8080"
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/open-webui/ollama:/root/.ollama
+      - ${DOCKERDATADIR}/open-webui/data:/app/backend/data

@@ -194,6 +194,9 @@
         description: Network Latency Measurements
 
 - Other:
+    - AdGuard Home:
+        icon: adguard-home.png
+        href: http://192.168.1.1:3000
     - Change Detection:
         icon: changedetection.png
         href: http://argon:5000

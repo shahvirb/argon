@@ -57,6 +57,11 @@
             type: audiobookshelf
             url: http://mediaserver2.fdatxvault.win:13378
             key: op://Dev - Home Lab/audiobookshelf/homepage api key
+    - Frigate:
+        icon: frigate.png
+        href: http://mediaserver2:5000
+        description: NVR
+        enableRecentEvents: true
     - JDownloader2:
         icon: jdownloader2.png
         href: http://mediaserver2:5800

@@ -21,37 +21,16 @@ services:
     image: vabene1111/recipes
     networks:
       - tandoor
-    restart: unless-stopped
-    volumes:
-      # Do not make this a bind mount, see https://docs.tandoor.dev/install/docker/#volumes-vs-bind-mounts
-      - staticfiles:/opt/recipes/staticfiles
-      - nginx_config:/opt/recipes/nginx/conf.d
-      - ${DOCKERDATADIR}/tandoor/mediafiles:/opt/recipes/mediafiles
-
-  nginx_recipes:
-    container_name: tandoor-nginx
-    depends_on:
-      - web_recipes
-    env_file:
-      - ./secrets-tandoor.env
-      - ./tandoor.env
-    image: nginx:mainline-alpine
-    networks:
-      - tandoor
-      # - proxy
     ports:
       - 8014:80
     restart: unless-stopped
     volumes:
       # Do not make this a bind mount, see https://docs.tandoor.dev/install/docker/#volumes-vs-bind-mounts
-      - nginx_config:/etc/nginx/conf.d:ro
-      - staticfiles:/static:ro
-      - ${DOCKERDATADIR}/tandoor/mediafiles:/media:ro
+      - staticfiles:/opt/recipes/staticfiles
+      - ${DOCKERDATADIR}/tandoor/mediafiles:/opt/recipes/mediafiles
 
 networks:
   tandoor:
 
 volumes:
-  # TODO these won't get backed up if they're non bind mount volumes
-  nginx_config:
   staticfiles:

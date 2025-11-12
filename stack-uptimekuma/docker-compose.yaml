@@ -2,8 +2,10 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
-    restart: always
+    dns_search:
+      - fdatxvault.win
     ports:
       - "3002:3001"
+    restart: always
     volumes:
       - ${DOCKERDATADIR}/uptimekuma:/app/data

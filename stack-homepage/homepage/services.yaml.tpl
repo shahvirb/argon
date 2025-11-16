@@ -125,6 +125,10 @@
             url: http://mediaserver.fdatxvault.win:8081
             username: op://Dev - Home Lab/qbittorrentvpn/username
             password: op://Dev - Home Lab/qbittorrentvpn/password
+    - Dispatcharr:
+        icon: dispatcharr.png
+        href: http://mediaserver2:9191
+        description: IPTV
 
 - Monitoring:
     - Glances (helium):

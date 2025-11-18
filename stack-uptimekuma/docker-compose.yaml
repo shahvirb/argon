@@ -4,8 +4,15 @@ services:
     container_name: uptime-kuma
     dns_search:
       - fdatxvault.win
+    networks:
+      - uptimekuma
     ports:
       - "3002:3001"
     restart: always
     volumes:
       - ${DOCKERDATADIR}/uptimekuma:/app/data
+
+networks:
+  uptimekuma:
+    external: true
+

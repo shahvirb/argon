@@ -19,6 +19,8 @@ services:
       - TZ=${TZ}
     hostname: ${HOSTNAME}
     image: creativeprojects/resticprofile:latest
+    networks:
+      - uptimekuma
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -28,3 +30,7 @@ services:
       # home job
       - '/mnt/ServerDataBackups/argon:/mnt/ServerDataBackups/argon'
       - '/home/shahvirb:/home/shahvirb:ro'
+
+networks:
+  uptimekuma:
+    external: true

@@ -1,10 +1,10 @@
 - Health:
     - Uptime Kuma:
         icon: uptime-kuma.png
-        href: http://monitor:3001
+        href: http://argon:3002
         widget:
             type: uptimekuma
-            url: http://monitor.fdatxvault.win:3001 
+            url: http://argon.fdatxvault.win:3002
             slug: all
     - OpenMediaVault:
         icon: openmediavault.png

@@ -237,6 +237,9 @@
         icon: bitwarden.png
         href: https://fdatxvault.win
         description: Password Manager
+    - Immich:
+        icon: immich.png
+        href: https://photos.fdatxvault.win
     - Joplin Server:
         icon: joplin.png
         href: https://joplinserver.fdatxvault.win

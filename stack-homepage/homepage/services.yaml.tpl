@@ -62,14 +62,51 @@
         href: http://mediaserver2:5000
         description: NVR
         enableRecentEvents: true
-    - JDownloader2:
-        icon: jdownloader2.png
-        href: http://mediaserver2:5800
-        description: File Downloader
     - Olive Tin:
         icon: olivetin.png
         href: http://mediaserver:1337
         description: Command Runner
+    - Dispatcharr:
+        icon: dispatcharr.png
+        href: http://mediaserver2:9191
+        description: IPTV
+    - JDownloader2:
+        icon: jdownloader2.png
+        href: http://mediaserver2:5800
+        description: File Downloader
+
+- Torrenting:
+    - Gluetun:
+        icon: gluetun.png
+        href: http://mediaserver2:8000
+        widget:
+            type: gluetun
+            url: http://mediaserver2.fdatxvault.win:8000
+            key: op://Dev - Home Lab/Gluetun mediaserver2/apikey
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://mediaserver2:9696
+        description: Torrent Indexer
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: http://mediaserver:8080
+        description: Torrent Client
+        widget:
+            type: qbittorrent
+            url: http://mediaserver.fdatxvault.win:8080
+            username: op://Dev - Home Lab/qbittorrentvpn/username
+            password: op://Dev - Home Lab/qbittorrentvpn/password
+    - qBittorrent VPN:
+        icon: qbittorrent.png
+        href: http://mediaserver:8081
+        description: Torrent Client with VPN
+        widget:
+            type: qbittorrent
+            url: http://mediaserver.fdatxvault.win:8081
+            username: op://Dev - Home Lab/qbittorrentvpn/username
+            password: op://Dev - Home Lab/qbittorrentvpn/password
+
+- Movies and TV Shows:
     - Plex:
         icon: plex.png
         href: http://mediaserver2:32400
@@ -79,10 +116,6 @@
             url: http://mediaserver2.fdatxvault.win:32400
             key: op://Dev - Home Lab/Plex/plex token
             # see https://www.plexopedia.com/plex-media-server/general/plex-token/ 
-    - Prowlarr:
-        icon: prowlarr.png
-        href: http://mediaserver2:9696
-        description: Torrent Indexer
     - Radarr:
         icon: radarr.png
         href: http://mediaserver2:7878
@@ -107,35 +140,6 @@
             type: tautulli
             url: http://mediaserver2.fdatxvault.win:8181
             key: op://Dev - Home Lab/Tautulli/homepage api key
-    - qBittorrent:
-        icon: qbittorrent.png
-        href: http://mediaserver:8080
-        description: Torrent Client
-        widget:
-            type: qbittorrent
-            url: http://mediaserver.fdatxvault.win:8080
-            username: op://Dev - Home Lab/qbittorrentvpn/username
-            password: op://Dev - Home Lab/qbittorrentvpn/password
-    - qBittorrent VPN:
-        icon: qbittorrent.png
-        href: http://mediaserver:8081
-        description: Torrent Client with VPN
-        widget:
-            type: qbittorrent
-            url: http://mediaserver.fdatxvault.win:8081
-            username: op://Dev - Home Lab/qbittorrentvpn/username
-            password: op://Dev - Home Lab/qbittorrentvpn/password
-    - Dispatcharr:
-        icon: dispatcharr.png
-        href: http://mediaserver2:9191
-        description: IPTV
-    - Gluetun:
-        icon: gluetun.png
-        href: http://mediaserver2:8000
-        widget:
-            type: gluetun
-            url: http://mediaserver2.fdatxvault.win:8000
-            key: op://Dev - Home Lab/Gluetun mediaserver2/apikey
 
 - Monitoring:
     - Glances (helium):

@@ -26,3 +26,11 @@ layout:
       columns: 4
       style: row
       tab: Monitoring
+  - Torrenting:
+      columns: 4
+      style: row
+      tab: Media
+  - Movies and TV Shows:
+      columns: 4
+      style: row
+      tab: Media

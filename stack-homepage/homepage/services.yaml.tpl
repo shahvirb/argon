@@ -129,6 +129,13 @@
         icon: dispatcharr.png
         href: http://mediaserver2:9191
         description: IPTV
+    - Gluetun:
+        icon: gluetun.png
+        href: http://mediaserver2:8000
+        widget:
+            type: gluetun
+            url: http://mediaserver2.fdatxvault.win:8000
+            key: op://Dev - Home Lab/Gluetun mediaserver2/apikey
 
 - Monitoring:
     - Glances (helium):

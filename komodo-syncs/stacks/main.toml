@@ -1,4 +1,16 @@
 [[stack]]
+name = "stack-loggifly"
+
+[stack.config]
+server = "argon"
+files_on_host = true
+file_paths = [ "docker-compose.yaml" ]
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+[[stack]]
 name = "stack-netalertx"
 
 [stack.config]

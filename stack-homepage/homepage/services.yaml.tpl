@@ -133,7 +133,7 @@
             url: http://mediaserver2.fdatxvault.win:8181
             key: op://Dev - Home Lab/Tautulli/homepage api key
 
-- Monitoring:
+- System Monitoring:
     - Glances (helium):
         href: http://helium:61208
         widget:
@@ -154,6 +154,8 @@
           diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
           refreshInterval: 5000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
           pointsLimit: 15 # optional, defaults to 15
+
+- Metrics & Analytics:
     - Grafana:
         icon: grafana.png
         href: http://helium:3000
@@ -162,14 +164,6 @@
         icon: influxdb.png
         href: http://helium:8086
         description: Time Series Database
-    - Komodo:
-        icon: komodo.png
-        href: http://argon:9120/
-        description: Container Management Platform
-    - NetAlertX:
-        icon: netalertx.png
-        href: http://argon:20211
-        description: Network Device Monitoring
     - Prometheus (helium):
         icon: prometheus.png
         href: http://helium:9090
@@ -182,6 +176,16 @@
         icon: prometheus.png
         href: http://helium:9091
         description: Intermediate Service for Prometheus
+
+- Infrastructure Monitoring:
+    - Komodo:
+        icon: komodo.png
+        href: http://argon:9120/
+        description: Container Management Platform
+    - NetAlertX:
+        icon: netalertx.png
+        href: http://argon:20211
+        description: Network Device Monitoring
     - Scrutiny:
         icon: scrutiny.png
         href: http://helium:8100

@@ -21,7 +21,11 @@ layout:
       tab: Media
   - Movies and TV Shows:
       tab: Media
-  - Monitoring:
+  - System Monitoring:
       columns: 4
       style: row
+      tab: Monitoring
+  - Metrics & Analytics:
+      tab: Monitoring
+  - Infrastructure Monitoring:
       tab: Monitoring

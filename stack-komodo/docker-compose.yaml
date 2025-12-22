@@ -43,25 +43,27 @@ services:
   ## Deploy Periphery container using this block,
   ## or deploy the Periphery binary with systemd using 
   ## https://github.com/moghtech/komodo/tree/main/scripts
-  periphery:
-    image: ghcr.io/moghtech/komodo-periphery:latest
-    labels:
-      komodo.skip: # Prevent Komodo from stopping with StopAllContainers
-    restart: unless-stopped
-    env_file: ./compose.env
-    environment:
-      PUID: ${PUID}
-      PGID: ${PGID}
-      TZ: ${TZ}
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /proc:/proc
-      ## Specify the Periphery agent root directory.
-      ## Must be the same inside and outside the container,
-      ## or docker will get confused. See https://github.com/moghtech/komodo/discussions/180.
-      ## Default: /etc/komodo.
-      - /etc/komodo:/etc/komodo
-      - /home/shahvirb/gitsource/argon:/home/shahvirb/gitsource/argon
+  # periphery:
+  #   image: ghcr.io/moghtech/komodo-periphery:latest
+  #   labels:
+  #     komodo.skip: # Prevent Komodo from stopping with StopAllContainers
+  #   restart: unless-stopped
+  #   env_file:
+  #     - ./compose.env
+  #   environment:
+  #     PUID: ${PUID}
+  #     PGID: ${PGID}
+  #     TZ: ${TZ}
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - /proc:/proc
+  #     ## Specify the Periphery agent root directory.
+  #     ## Must be the same inside and outside the container,
+  #     ## or docker will get confused. See https://github.com/moghtech/komodo/discussions/180.
+  #     ## Default: /etc/komodo.
+  #     - /etc/komodo:/etc/komodo
+  #     - /home/shahvirb/gitsource/argon:/home/shahvirb/gitsource/argon
+  #     - /home/shahvirb/gitsource/utils:/home/shahvirb/gitsource/utils:ro
 
   # komodo-import:
   #   image: foxxmd/komodo-import:latest

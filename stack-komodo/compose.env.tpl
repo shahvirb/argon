@@ -43,7 +43,7 @@ KOMODO_FIRST_SERVER=https://periphery:8120
 ## Give the first server a custom name.
 KOMODO_FIRST_SERVER_NAME=argon
 ## Make all buttons just double-click, rather than the full confirmation dialog.
-KOMODO_DISABLE_CONFIRM_DIALOG=false
+KOMODO_DISABLE_CONFIRM_DIALOG=true
 
 ## Rate Komodo polls your servers for
 ## status / container status / system stats / alerting.
@@ -72,7 +72,7 @@ KOMODO_INIT_ADMIN_USERNAME=admin
 ## Set the initial admin password
 KOMODO_INIT_ADMIN_PASSWORD=changeme
 ## Disable new user signups.
-KOMODO_DISABLE_USER_REGISTRATION=false
+KOMODO_DISABLE_USER_REGISTRATION=true
 ## All new logins are auto enabled
 KOMODO_ENABLE_NEW_USERS=false
 ## Disable non-admins from creating new resources.
@@ -81,7 +81,7 @@ KOMODO_DISABLE_NON_ADMIN_CREATE=false
 KOMODO_TRANSPARENT_MODE=false
 
 ## Prettier logging with empty lines between logs
-KOMODO_LOGGING_PRETTY=false
+KOMODO_LOGGING_PRETTY=true
 ## More human readable logging of startup config (multi-line)
 KOMODO_PRETTY_STARTUP_CONFIG=false
 
@@ -126,7 +126,7 @@ KOMODO_AWS_SECRET_ACCESS_KEY= # Alt: KOMODO_AWS_SECRET_ACCESS_KEY_FILE
 ## 🦎 https://github.com/moghtech/komodo/blob/main/config/periphery.config.toml 🦎
 
 ## Specify the root directory used by Periphery agent.
-PERIPHERY_ROOT_DIRECTORY=/home/shahvirb/gitsource/argon
+PERIPHERY_ROOT_DIRECTORY=/etc/komodo
 PERIPHERY_STACK_DIR=/home/shahvirb/gitsource/argon
 
 ## Periphery passkeys must include KOMODO_PASSKEY to authenticate.
@@ -148,6 +148,6 @@ PERIPHERY_INCLUDE_DISK_MOUNTS=/etc/hostname
 # PERIPHERY_EXCLUDE_DISK_MOUNTS=/snap,/etc/repos
 
 ## Prettier logging with empty lines between logs
-PERIPHERY_LOGGING_PRETTY=false
+PERIPHERY_LOGGING_PRETTY=true
 ## More human readable logging of startup config (multi-line)
-PERIPHERY_PRETTY_STARTUP_CONFIG=false
+PERIPHERY_PRETTY_STARTUP_CONFIG=true

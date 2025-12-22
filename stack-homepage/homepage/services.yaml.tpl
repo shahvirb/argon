@@ -89,20 +89,11 @@
         description: Torrent Indexer
     - qBittorrent:
         icon: qbittorrent.png
-        href: http://mediaserver:8080
-        description: Torrent Client
-        widget:
-            type: qbittorrent
-            url: http://mediaserver.fdatxvault.win:8080
-            username: op://Dev - Home Lab/qbittorrentvpn/username
-            password: op://Dev - Home Lab/qbittorrentvpn/password
-    - qBittorrent VPN:
-        icon: qbittorrent.png
-        href: http://mediaserver:8081
+        href: http://mediaserver2:8099
         description: Torrent Client with VPN
         widget:
             type: qbittorrent
-            url: http://mediaserver.fdatxvault.win:8081
+            url: http://mediaserver2.fdatxvault.win:8099
             username: op://Dev - Home Lab/qbittorrentvpn/username
             password: op://Dev - Home Lab/qbittorrentvpn/password
 

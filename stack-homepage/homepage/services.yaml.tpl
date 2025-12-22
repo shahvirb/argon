@@ -61,11 +61,12 @@
         icon: frigate.png
         href: http://mediaserver2:5000
         description: NVR
-        enableRecentEvents: true
-    - Olive Tin:
-        icon: olivetin.png
-        href: http://mediaserver:1337
-        description: Command Runner
+        widget:
+            type: frigate
+            url: http://mediaserver2.fdatxvault.win:5000
+            enableRecentEvents: true # Optional, defaults to false
+            username: op://Dev - Home Lab/Frigate mediaserver2/username
+            password: op://Dev - Home Lab/Frigate mediaserver2/password
     - Dispatcharr:
         icon: dispatcharr.png
         href: http://mediaserver2:9191
@@ -143,16 +144,6 @@
           diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
           refreshInterval: 5000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
           pointsLimit: 15 # optional, defaults to 15
-    - Glances (mediaserver):
-        href: http://mediaserver:61208
-        widget:
-            type: glances
-            url: http://mediaserver.fdatxvault.win:61208
-            version: 4 # required only if running glances v4 or higher, defaults to 3
-            metric: info
-            diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
-            refreshInterval: 5000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
-            pointsLimit: 15 # optional, defaults to 15
     - Glances (mediaserver2):
         href: http://mediaserver2:61208
         widget:
@@ -179,10 +170,6 @@
         icon: netalertx.png
         href: http://argon:20211
         description: Network Device Monitoring
-    - Portainer:
-        icon: portainer.png
-        href: http://monitor:9000
-        description: Container Management
     - Prometheus (helium):
         icon: prometheus.png
         href: http://helium:9090

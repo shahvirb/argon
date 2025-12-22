@@ -48,7 +48,11 @@ services:
     labels:
       komodo.skip: # Prevent Komodo from stopping with StopAllContainers
     restart: unless-stopped
+    # user: "1000:1000"
     env_file: ./compose.env
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
     volumes:
       ## Mount external docker socket
       - /var/run/docker.sock:/var/run/docker.sock
@@ -58,4 +62,28 @@ services:
       ## Must be the same inside and outside the container,
       ## or docker will get confused. See https://github.com/moghtech/komodo/discussions/180.
       ## Default: /etc/komodo.
-      - ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}:${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}
+      - /home/shahvirb/gitsource/argon:/home/shahvirb/gitsource/argon
+
+  komodo-import:
+    image: foxxmd/komodo-import:latest
+    volumes:
+      ## Mount the parent directory where all subfolders are compose projects
+      - /home/shahvirb/gitsource/argon:/filesOnServer
+    environment:
+      ## Same as host directory mounted above
+      - HOST_DIR=/home/shahvirb/gitsource/argon
+      ## where stacks are generated from. 'dir' or 'compose'
+      - STACKS_FROM=dir
+      ## Komodo Server name to use for generated Stacks
+      - SERVER_NAME=argon
+
+      ## optional
+      - TZ=${TZ}
+      #- IMAGE_REGISTRY_PROVIDER=
+      #- IMAGE_REGISTRY_ACCOUNT=
+      #- AUTO_UPDATE=false
+      #- POLL_FOR_UPDATE=false
+      #- KOMODO_ENV_NAME=
+      #- COMPOSE_FILE_GLOB=
+      #- ENV_FILE_GLOB=
+    restart: no

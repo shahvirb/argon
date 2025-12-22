@@ -126,7 +126,8 @@ KOMODO_AWS_SECRET_ACCESS_KEY= # Alt: KOMODO_AWS_SECRET_ACCESS_KEY_FILE
 ## 🦎 https://github.com/moghtech/komodo/blob/main/config/periphery.config.toml 🦎
 
 ## Specify the root directory used by Periphery agent.
-PERIPHERY_ROOT_DIRECTORY=/etc/komodo
+PERIPHERY_ROOT_DIRECTORY=/home/shahvirb/gitsource/argon
+PERIPHERY_STACK_DIR=/home/shahvirb/gitsource/argon
 
 ## Periphery passkeys must include KOMODO_PASSKEY to authenticate.
 PERIPHERY_PASSKEYS=${KOMODO_PASSKEY}

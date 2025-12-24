@@ -15,11 +15,6 @@ home:
         url: http://uptime-kuma:3001/api/push/fPMmwJugMx?status=down&msg=ERROR
     source: "/home/shahvirb"
     verbose: true
-  # copy:
-  #   initialize: false
-  #   repository: "local:/backups/helium"
-  #   password-file: pw.key
-  #   # snapshot: latest
   check:
     schedule: "2:19"
     schedule-permission: system

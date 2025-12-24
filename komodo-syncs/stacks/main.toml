@@ -1,19 +1,185 @@
 [[stack]]
-name = "stack-loggifly"
+name = "stack-changedetection"
 
 [stack.config]
 server = "argon"
-files_on_host = true
 file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
+name = "stack-dockge"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+git_provider = "github.com"
+repo = "shahvirb/stack-dockge"
+
+
+[[stack]]
+name = "stack-forgejo"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
 
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-homepage"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-kestra"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-komodo"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-komodo-import"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
+name = "stack-loggifly"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
 
 [[stack]]
 name = "stack-netalertx"
 
 [stack.config]
 server = "argon"
-files_on_host = true
 file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
+name = "stack-openproject"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-openwebui"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
+name = "stack-resticprofile"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-tandoor"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-unifinetwork"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-uptimekuma"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
+name = "stack-watchtower"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+git_provider = "github.com"
+repo = "shahvirb/stack-watchtower"
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+

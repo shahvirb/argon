@@ -1,6 +1,3 @@
-[submodule "stack-portaineragent"]
-	path = stack-portaineragent
-	url = https://github.com/shahvirb/stack-portaineragent.git
 [submodule "stack-dockge"]
 	path = stack-dockge
 	url = https://github.com/shahvirb/stack-dockge.git

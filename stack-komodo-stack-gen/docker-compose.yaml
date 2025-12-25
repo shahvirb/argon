@@ -10,7 +10,9 @@ services:
       - ../../komodo-stack-gen/src:/app/src:ro
       - ../../komodo-stack-gen/templates:/app/templates:ro
       # Mount the stacks root dir
-      - ../../argon:/stacks:ro
-    command: ["stacks", "/stacks"]
+      - ../../${HOSTNAME}:/stacks:ro
+      # Mount output directory
+      - ./output:/output
+    command: ["stacks", "/stacks", "--output", "/output/main.toml"]
     environment:
       - HOSTNAME=${HOSTNAME}

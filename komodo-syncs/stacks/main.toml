@@ -79,6 +79,15 @@ files_on_host = true
 
 
 [[stack]]
+name = "stack-komodo-stack-gen"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+files_on_host = true
+
+
+[[stack]]
 name = "stack-loggifly"
 
 [stack.config]

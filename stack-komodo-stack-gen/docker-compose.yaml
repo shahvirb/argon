@@ -1,0 +1,16 @@
+services:
+  komodo-stack-gen:
+    build:
+      context: ../../komodo-stack-gen
+      dockerfile: Dockerfile
+    image: komodo-stack-gen:latest
+    container_name: komodo-stack-gen
+    volumes:
+      # Mount source code and templates from the project
+      - ../../komodo-stack-gen/src:/app/src:ro
+      - ../../komodo-stack-gen/templates:/app/templates:ro
+      # Mount the stacks root dir
+      - ../../argon:/stacks:ro
+    command: ["stacks", "/stacks"]
+    environment:
+      - HOSTNAME=${HOSTNAME}

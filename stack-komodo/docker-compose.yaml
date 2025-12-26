@@ -1,5 +1,6 @@
 services:
   mongo:
+    container_name: komodo-mongo
     image: mongo
     command: --quiet --wiredTigerCacheSizeGB 0.25
     env_file: ./compose.env
@@ -16,11 +17,14 @@ services:
   
   core:
     image: ghcr.io/moghtech/komodo-core:latest
+    container_name: komodo-core
     labels:
       komodo.skip: # Prevent Komodo from stopping with StopAllContainers
     restart: unless-stopped
     depends_on:
       - mongo
+    dns_search:
+      - fdatxvault.win
     ports:
       - 9120:9120
     env_file: ./compose.env
@@ -35,10 +39,7 @@ services:
       - ../komodo-syncs:/syncs
       ## Optionally mount a custom core.config.toml
       # - /path/to/core.config.toml:/config/config.toml
-    ## Allows for systemd Periphery connection at 
-    ## "https://host.docker.internal:8120"
-    # extra_hosts:
-    #   - host.docker.internal:host-gateway
+
 
   ## Deploy Periphery container using this block,
   ## or deploy the Periphery binary with systemd using 

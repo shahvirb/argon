@@ -84,8 +84,10 @@ name = "stack-komodo-stack-gen"
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
-files_on_host = true
-
+git_provider = "github.com"
+repo = "shahvirb/stack-komodo-stack-gen"
+run_directory = "docker"
+auto_pull = false
 
 [[stack]]
 name = "stack-loggifly"

@@ -79,7 +79,7 @@ files_on_host = true
 
 
 [[stack]]
-name = "stack-komodo-stack-gen"
+name = "stack-komodo-stack-gen_argon"
 
 [stack.config]
 server = "argon"

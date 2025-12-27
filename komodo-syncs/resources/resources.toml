@@ -17,4 +17,4 @@ name = "stacks"
 
 [resource_sync.config]
 files_on_host = true
-resource_path = ["argon.toml"]
+resource_path = ["argon.toml", "mediaserver2.toml"]

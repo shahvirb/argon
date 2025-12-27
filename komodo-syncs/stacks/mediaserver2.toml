@@ -1,0 +1,10 @@
+[[stack]]
+name = "stack-komodo-stack-gen_mediaserver2"
+
+[stack.config]
+server = "mediaserver2"
+file_paths = [ "docker-compose.yaml" ]
+git_provider = "github.com"
+repo = "shahvirb/stack-komodo-stack-gen"
+run_directory = "docker"
+auto_pull = false

@@ -1,0 +1,20 @@
+[[resource_sync]]
+name = "resources"
+
+[resource_sync.config]
+files_on_host = true
+resource_path = ["resources.toml"]
+
+[[resource_sync]]
+name = "servers"
+
+[resource_sync.config]
+files_on_host = true
+resource_path = ["servers.toml"]
+
+[[resource_sync]]
+name = "stacks"
+
+[resource_sync.config]
+files_on_host = true
+resource_path = ["argon.toml"]

@@ -1,0 +1,11 @@
+[[server]]
+name = "argon"
+[server.config]
+address = "https://argon:8120"
+enabled = true
+
+[[server]]
+name = "mediaserver2"
+[server.config]
+address = "https://mediaserver2:8120"
+enabled = true

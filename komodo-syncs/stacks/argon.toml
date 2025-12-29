@@ -49,11 +49,12 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-kestra"
+name = "stack-kestra_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-kestra"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -62,11 +63,12 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-komodo"
+name = "stack-komodo_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-komodo"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -97,11 +99,12 @@ auto_pull = false
 
 
 [[stack]]
-name = "stack-loggifly"
+name = "stack-loggifly_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-loggifly"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -114,39 +117,18 @@ name = "stack-netalertx_argon"
 
 [stack.config]
 server = "argon"
-run_directory = "../stack-netalertx"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-netalertx"
 files_on_host = true
 
 
 [[stack]]
-name = "stack-openproject"
+name = "stack-openproject_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
-files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
-
-[[stack]]
-name = "stack-openwebui"
-
-[stack.config]
-server = "argon"
-file_paths = [ "docker-compose.yaml" ]
-files_on_host = true
-
-
-[[stack]]
-name = "stack-resticprofile"
-
-[stack.config]
-server = "argon"
-file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-openproject"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -155,11 +137,22 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-tandoor"
+name = "stack-openwebui_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-openwebui"
+files_on_host = true
+
+
+[[stack]]
+name = "stack-resticprofile_argon"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-resticprofile"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -168,11 +161,12 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-unifinetwork"
+name = "stack-tandoor_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-tandoor"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -181,22 +175,39 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-uptimekuma"
+name = "stack-unifinetwork_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-unifinetwork"
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
+name = "stack-uptimekuma_argon"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-uptimekuma"
 files_on_host = true
 
 
 [[stack]]
-name = "stack-watchtower"
+name = "stack-watchtower_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-watchtower"
 git_provider = "github.com"
 repo = "shahvirb/stack-watchtower"
+clone_path = "/home/shahvirb/gitsource/argon/stack-watchtower"
 
 [stack.config.pre_deploy]
 path = ""

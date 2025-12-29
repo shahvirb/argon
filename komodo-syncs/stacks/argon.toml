@@ -1,28 +1,32 @@
 [[stack]]
-name = "stack-changedetection"
+name = "stack-changedetection_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-changedetection"
 files_on_host = true
 
 
 [[stack]]
-name = "stack-dockge"
+name = "stack-dockge_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-dockge"
 git_provider = "github.com"
 repo = "shahvirb/stack-dockge"
+clone_path = "/home/shahvirb/gitsource/argon/stack-dockge"
 
 
 [[stack]]
-name = "stack-forgejo"
+name = "stack-forgejo_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-forgejo"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -31,11 +35,12 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-homepage"
+name = "stack-homepage_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-homepage"
 files_on_host = true
 
 [stack.config.pre_deploy]
@@ -78,15 +83,25 @@ file_paths = [ "docker-compose.yaml" ]
 files_on_host = true
 
 
+# [[stack]]
+# name = "stack-komodo-stack-gen_argon"
+
+# [stack.config]
+# server = "argon"
+# file_paths = [ "docker-compose.yaml" ]
+# git_provider = "github.com"
+# repo = "shahvirb/stack-komodo-stack-gen"
+# run_directory = "docker"
+# auto_pull = false
+
 [[stack]]
 name = "stack-komodo-stack-gen_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
-git_provider = "github.com"
-repo = "shahvirb/stack-komodo-stack-gen"
-run_directory = "docker"
+run_directory = "/home/shahvirb/gitsource/argon/stack-komodo-stack-gen/docker"
+files_on_host = true
 auto_pull = false
 
 
@@ -104,10 +119,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
-name = "stack-netalertx"
+name = "stack-netalertx_argon"
 
 [stack.config]
 server = "argon"
+run_directory = "../stack-netalertx"
 file_paths = [ "docker-compose.yaml" ]
 files_on_host = true
 

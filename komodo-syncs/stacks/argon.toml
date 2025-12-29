@@ -74,15 +74,6 @@ path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
-[[stack]]
-name = "stack-komodo-import"
-
-[stack.config]
-server = "argon"
-file_paths = [ "docker-compose.yaml" ]
-files_on_host = true
-
-
 # [[stack]]
 # name = "stack-komodo-stack-gen_argon"
 

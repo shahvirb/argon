@@ -1,0 +1,30 @@
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    environment:
+      DATABASE_URL: data/db.sqlite3
+      DISABLE_ADMIN_TOKEN: "false"
+      DOMAIN: https://fdatxvault.win
+      ENABLE_DB_WAL: "true"
+      EXTENDED_LOGGING: "true"
+      INVITATIONS_ALLOWED: "false"
+      IP_HEADER: "X-Forwarded-For"
+      LOG_LEVEL: "warn"
+      PGID: "${PGID}"
+      PUID: "${PUID}"
+      SHOW_PASSWORD_HINT: "false"
+      SIGNUPS_ALLOWED: "false"
+      SIGNUPS_VERIFY: "false"
+      TZ: "${TZ}"
+      WEBSOCKET_ENABLED: "false"
+    env_file:
+      - secrets-bitwarden.env
+    image: vaultwarden/server:latest
+    ports:
+    - 8013:80
+    - 3012:3012
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${DOCKERDATADIR}/bitwarden:/data
+      - ./config.json:/data/config.json

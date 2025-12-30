@@ -16,4 +16,5 @@ stack-resticprofile/pw.key
 stack-scrutiny/scrutiny.yaml
 stack-tandoor/secrets-tandoor.env
 stack-unifinetwork/secrets.env
+stack-vaultwarden/secrets-bitwarden.env
 stack-vikunja/secrets-db.env

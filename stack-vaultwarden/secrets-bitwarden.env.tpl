@@ -1,0 +1,1 @@
+ADMIN_TOKEN='op://Dev - Home Lab/vaultwarden fdatxvault.win/hashed admin token'

@@ -1,0 +1,6 @@
+POSTGRES_PASSWORD='op://Dev - Home Lab/Vikunja/database password'
+VIKUNJA_DATABASE_PASSWORD='op://Dev - Home Lab/Vikunja/database password'
+POSTGRES_USER='vikunja'
+VIKUNJA_DATABASE_USER='vikunja'
+VIKUNJA_DATABASE_DATABASE='vikunja'
+VIKUNJA_SERVICE_JWTSECRET='op://Dev - Home Lab/Vikunja/service jwtsecret'

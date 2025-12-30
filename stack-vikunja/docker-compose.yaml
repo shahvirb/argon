@@ -1,0 +1,33 @@
+services:
+  vikunjadb:
+    container_name: vikunjadb
+    image: postgres:16
+    env_file:
+      - secrets-db.env
+    environment:
+      TZ: "${TZ}"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U $$POSTGRES_USER"]
+      interval: 2s
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/vikunja/pgdb:/var/lib/postgresql/data
+
+  vikunja:
+    container_name: vikunja
+    image: vikunja/vikunja
+    depends_on:
+      vikunjadb:
+        condition: service_healthy
+    env_file:
+      - secrets-db.env
+    environment:
+      VIKUNJA_DATABASE_HOST: vikunjadb
+      VIKUNJA_DATABASE_TYPE: postgres
+      VIKUNJA_SERVICE_ENABLEREGISTRATION: false
+      VIKUNJA_SERVICE_PUBLICURL: https://vikunja.fdatxvault.win/
+    ports:
+      - 3456:3456
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/vikunja/files:/app/vikunja/files

@@ -13,3 +13,4 @@ stack-openwebui/litellm-config.yaml
 stack-resticprofile/pw.key
 stack-tandoor/secrets-tandoor.env
 stack-unifinetwork/secrets.env
+stack-vikunja/secrets-db.env

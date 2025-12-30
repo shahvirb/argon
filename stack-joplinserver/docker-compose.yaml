@@ -1,0 +1,38 @@
+services:
+  joplinpostgresdb:
+    container_name: joplin-db
+    image: postgres:14
+    env_file:
+      - secrets-db.env
+    environment:
+      PGID: "${PGID}"
+      POSTGRES_DB: "joplin"
+      PUID: "${PUID}"
+      TZ: "${TZ}"
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/joplin/db:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+
+  joplinserver:
+    container_name: joplin-server
+    image: joplin/server
+    depends_on:
+      - joplinpostgresdb
+    restart: unless-stopped
+    env_file:
+      - secrets-db.env
+    environment:
+      APP_BASE_URL: "https://joplinserver.fdatxvault.win"
+      APP_PORT: "22300"
+      DB_CLIENT: "pg"
+      PGID: "${PGID}"
+      POSTGRES_DATABASE: "joplin"
+      POSTGRES_HOST: "joplin-db"
+      POSTGRES_PORT: "5432"
+      PUID: "${PUID}"
+      TZ: "${TZ}"
+    ports:
+      - 22300:22300
+    volumes:
+      - /etc/localtime:/etc/localtime:ro

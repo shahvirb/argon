@@ -35,6 +35,19 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
+name = "stack-joplinserver_argon"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-joplinserver"
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+[[stack]]
 name = "stack-homepage_argon"
 
 [stack.config]

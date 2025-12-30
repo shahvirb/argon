@@ -211,11 +211,11 @@
         href: http://argon:3000
     - Paperless:
         icon: paperless.png
-        href: http://helium:8000
+        href: http://argon:8000
         description: Document Management
         widget:
             type: paperlessngx
-            url: http://helium.fdatxvault.win:8000
+            url: http://argon:8000
             key: op://Dev - Home Lab/Paperless/homepage api key
 
 - Web:

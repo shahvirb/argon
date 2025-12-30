@@ -33,3 +33,40 @@ home:
     prune: true
     tag: true
   password-file: pw.key
+
+paperless:
+  backup:
+    exclude-caches: true
+    one-file-system: true
+    schedule-permission: system
+    schedule: "*:00,15,30,45"
+    send-after:
+      - method: GET
+        url: http://argon.fdatxvault.win:3002/api/push/rT9gYCCQnp?status=up&msg=OK
+    send-after-fail:
+      - method: GET
+        url: http://argon.fdatxvault.win:3002/api/push/rT9gYCCQnp?status=down&msg=ERROR
+    skip-if-unchanged: true
+    source: "/mnt/Paperless"
+    verbose: true
+  check:
+    schedule: "2:07"
+    schedule-permission: system
+  initialize: false
+  repository: "local:/mnt/ServerDataBackups/Paperless"
+  restic-stale-lock-age: 15m
+  force-inactive-lock: true
+  retention:
+    after-backup: true
+    before-backup: false
+    keep-daily: 60
+    keep-hourly: 96
+    keep-weekly: 16
+    keep-monthly: 24
+    keep-within: 1d
+    prune: true
+    tag: true
+  password-file: pw.key
+  # prometheus-push: "http://helium:9091/"
+  # prometheus-labels:
+  #   - host: {{ .Hostname }}

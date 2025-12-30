@@ -1,0 +1,73 @@
+# https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docker/compose/docker-compose.postgres-tika.yml
+services:
+  broker:
+    container_name: paperless-broker
+    image: docker.io/library/redis:7
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/paperless/redisdata:/data
+
+  db:
+    container_name: paperless-db
+    image: docker.io/library/postgres:15
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/paperless/pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: paperless
+      POSTGRES_USER: paperless
+    env_file: secrets-paperless.env
+
+  webserver:
+    container_name: paperless-webserver
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    restart: unless-stopped
+    depends_on:
+      - db
+      - broker
+      - gotenberg
+      - tika
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "-S", "--max-time", "2", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+      # - /mnt/Paperless/consume:/usr/src/paperless/consume
+      - ${DOCKERDATADIR}/paperless/consume:/usr/src/paperless/consume
+      - /mnt/Paperless/media:/usr/src/paperless/media
+      - ${DOCKERDATADIR}/paperless/data:/usr/src/paperless/data
+      - ${DOCKERDATADIR}/paperless/export:/usr/src/paperless/export
+    env_file:
+      - secrets-paperless.env
+    environment:
+      PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_DBHOST: db
+      PAPERLESS_FILENAME_FORMAT: '{{original_name}}'
+      PAPERLESS_FILENAME_FORMAT_REMOVE_NONE: True
+      PAPERLESS_TIKA_ENABLED: 1
+      PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
+      PAPERLESS_TIKA_ENDPOINT: http://tika:9998
+      PAPERLESS_TIME_ZONE: ${TZ}
+      # PAPERLESS_OCR_USER_ARGS: '{}'
+      PAPERLESS_OCR_USER_ARGS: '{"invalidate_digital_signatures": true}'
+      USERMAP_UID: ${PUID}
+      USERMAP_GID: ${PGID}
+
+  gotenberg:
+    container_name: paperless-gotenberg
+    image: docker.io/gotenberg/gotenberg:7.10
+    restart: unless-stopped
+    # The gotenberg chromium route is used to convert .eml files. We do not
+    # want to allow external content like tracking pixels or even javascript.
+    command:
+      - "gotenberg"
+      - "--chromium-disable-javascript=true"
+      - "--chromium-allow-list=file:///tmp/.*"
+
+  tika:
+    container_name: paperless-tika
+    image: docker.io/apache/tika:latest
+    restart: unless-stopped

@@ -5,6 +5,12 @@ address = "https://argon:8120"
 enabled = true
 
 [[server]]
+name = "helium"
+[server.config]
+address = "https://helium:8120"
+enabled = true
+
+[[server]]
 name = "mediaserver2"
 [server.config]
 address = "https://mediaserver2:8120"

@@ -8,6 +8,8 @@ stack-kestra/secrets.env
 stack-komodo/compose.env
 stack-loggifly/loggifly/config.yaml
 stack-openproject/.env
+stack-openwebui/app.env
+stack-openwebui/litellm-config.yaml
 stack-resticprofile/pw.key
 stack-tandoor/secrets-tandoor.env
 stack-unifinetwork/secrets.env

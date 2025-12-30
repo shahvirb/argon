@@ -1,4 +1,39 @@
 services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    container_name: litellm_db
+    env_file:
+      - app.env
+    environment:
+      POSTGRES_DB: litellm
+      POSTGRES_USER: llmproxy
+    ports:
+      - "5432:5432"
+    volumes:
+      - ${DOCKERDATADIR}/open-webui/data:/var/lib/postgresql/data # Persists Postgres data across container restarts
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d litellm -U llmproxy"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+
+  litellm:
+    container_name: litellm
+    image: ghcr.io/berriai/litellm:main-latest
+    env_file:
+      - app.env
+    environment:
+      - TZ=${TZ}
+      - PORT=4000
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
+    volumes:
+      - ./litellm-config.yaml:/app/config.yaml
+      # - ${DOCKERDATADIR}/litellm/config:/app/config
+    command: ["--config", "/app/config.yaml", "--port", "4000", "--num_workers", "1"]
+
   open-webui:
     container_name: open-webui
     image: ghcr.io/open-webui/open-webui:ollama

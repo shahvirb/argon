@@ -21,6 +21,7 @@ files_on_host = true
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
+
 [[stack]]
 name = "stack-dispatcharr_mediaserver2"
 
@@ -58,6 +59,7 @@ files_on_host = true
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
+
 [[stack]]
 name = "stack-glances_mediaserver2"
 
@@ -68,6 +70,7 @@ run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-glances"
 git_provider = "github.com"
 repo = "shahvirb/stack-glances"
 clone_path = "/home/shahvirb/gitsource/mediaserver2/stack-glances"
+
 
 [[stack]]
 name = "stack-immich_mediaserver2"
@@ -104,6 +107,7 @@ repo = "shahvirb/stack-komodo-stack-gen"
 clone_path = "/home/shahvirb/gitsource/mediaserver2/stack-komodo-stack-gen"
 auto_pull = false
 
+
 [[stack]]
 name = "stack-plex_mediaserver2"
 
@@ -112,6 +116,11 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-plex"
 files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
 
 [[stack]]
 name = "stack-prowlarr_mediaserver2"
@@ -122,6 +131,7 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-prowlarr"
 files_on_host = true
 
+
 [[stack]]
 name = "stack-radarr_mediaserver2"
 
@@ -130,6 +140,7 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-radarr"
 files_on_host = true
+
 
 [[stack]]
 name = "stack-recyclarr_mediaserver2"
@@ -143,6 +154,7 @@ files_on_host = true
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
 
 [[stack]]
 name = "stack-resticbackup_mediaserver2"
@@ -178,6 +190,7 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-sonarr"
 files_on_host = true
 
+
 [[stack]]
 name = "stack-tautulli_mediaserver2"
 
@@ -200,3 +213,4 @@ files_on_host = true
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+

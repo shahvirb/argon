@@ -9,10 +9,10 @@ home:
     schedule: "*:00"
     send-after:
       - method: GET
-        url: http://uptime-kuma:3001/api/push/fPMmwJugMx?status=up&msg=OK
+        url: http://argon.fdatxvault.win:3002/api/push/fPMmwJugMx?status=up&msg=OK
     send-after-fail:
       - method: GET
-        url: http://uptime-kuma:3001/api/push/fPMmwJugMx?status=down&msg=ERROR
+        url: http://argon.fdatxvault.win:3002/api/push/fPMmwJugMx?status=down&msg=ERROR
     source: "/home/shahvirb"
     verbose: true
   check:

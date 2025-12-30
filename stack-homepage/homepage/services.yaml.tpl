@@ -188,7 +188,7 @@
         description: Network Device Monitoring
     - Scrutiny:
         icon: scrutiny.png
-        href: http://helium:8100
+        href: http://argon:8100
         description: WebUI for S.M.A.R.T monitoring
     - Smokeping:
         icon: smokeping.png

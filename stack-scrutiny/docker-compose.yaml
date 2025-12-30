@@ -1,0 +1,45 @@
+services:
+  scrutiny-influxdb:
+    container_name: scrutiny-influxdb
+    healthcheck:
+      test: curl -f http://localhost:8086/health
+      interval: 5s
+      timeout: 10s
+      retries: 20
+    image: influxdb:2.7
+    logging:
+      driver: json-file
+      options:
+        max-file: ${DOCKERLOGGING_MAXFILE}
+        max-size: ${DOCKERLOGGING_MAXSIZE}
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/scrutiny/influxdb:/var/lib/influxdb2
+
+  scrutiny-web:
+    container_name: scrutiny-web
+    depends_on:
+      scrutiny-influxdb:
+        condition: service_healthy
+    environment:
+      - HOSTNAME=${HOSTNAME}
+      - TZ=${TZ}
+      - SCRUTINY_WEB_INFLUXDB_HOST=scrutiny-influxdb
+    healthcheck:
+      test: curl -f http://localhost:8080/api/health
+      interval: 5s
+      timeout: 10s
+      retries: 20
+      start_period: 10s
+    image: ghcr.io/analogj/scrutiny:master-web
+    logging:
+      driver: json-file
+      options:
+        max-file: ${DOCKERLOGGING_MAXFILE}
+        max-size: ${DOCKERLOGGING_MAXSIZE}
+    ports:
+      - 8100:8080
+    restart: unless-stopped
+    volumes:
+      - ./scrutiny.yaml:/opt/scrutiny/config/scrutiny.yaml:ro
+      - ${DOCKERDATADIR}/scrutiny/web:/opt/scrutiny/config

@@ -1,3 +1,5 @@
+name: stack-kestra_argon
+
 volumes:
   postgres-data:
     driver: local

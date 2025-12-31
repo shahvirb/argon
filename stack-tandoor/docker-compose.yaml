@@ -1,3 +1,5 @@
+name: stack-tandoor_argon
+
 services:
   db_recipes:
     container_name: tandoor-db

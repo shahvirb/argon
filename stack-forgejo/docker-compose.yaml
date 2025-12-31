@@ -1,3 +1,5 @@
+name: stack-forgejo_argon
+
 networks:
   forgejo:
     external: false

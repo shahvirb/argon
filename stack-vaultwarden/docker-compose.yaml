@@ -1,3 +1,5 @@
+name: stack-vaultwarden_argon
+
 services:
   vaultwarden:
     container_name: vaultwarden

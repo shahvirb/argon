@@ -1,4 +1,6 @@
 # https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docker/compose/docker-compose.postgres-tika.yml
+name: stack-paperless_argon
+
 services:
   broker:
     container_name: paperless-broker

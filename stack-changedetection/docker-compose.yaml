@@ -1,3 +1,5 @@
+name: stack-changedetection_argon
+
 services:
   changedetection.io:
     image: dgtlmoon/changedetection.io

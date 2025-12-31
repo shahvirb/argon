@@ -1,3 +1,5 @@
+name: stack-scrutiny_argon
+
 services:
   scrutiny-influxdb:
     container_name: scrutiny-influxdb

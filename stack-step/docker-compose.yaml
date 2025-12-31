@@ -1,3 +1,5 @@
+name: stack-step_argon
+
 services:
   step-ca:
     image: smallstep/step-ca:latest

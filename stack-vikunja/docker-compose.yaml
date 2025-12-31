@@ -1,3 +1,5 @@
+name: stack-vikunja_argon
+
 services:
   vikunjadb:
     container_name: vikunjadb

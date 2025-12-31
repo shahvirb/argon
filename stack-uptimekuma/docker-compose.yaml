@@ -1,3 +1,5 @@
+name: stack-uptimekuma_argon
+
 services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest

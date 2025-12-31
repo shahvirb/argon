@@ -1,3 +1,5 @@
+name: stack-unifinetwork_argon
+
 services:
   unifi-db:
     container_name: unifi-db

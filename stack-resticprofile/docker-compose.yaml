@@ -1,4 +1,6 @@
 # COMMAND REFERENCE
+name: stack-resticprofile_argon
+
 # profiles : to list all profiles
 # <job_name>.snapshots : to see what snapshots exist for a given job
 # <job_name>.status : to see the scheduling status for a given job

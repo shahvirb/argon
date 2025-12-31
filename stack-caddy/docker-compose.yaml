@@ -1,3 +1,5 @@
+name: stack-caddy_argon
+
 services:
   caddy:
     build: 

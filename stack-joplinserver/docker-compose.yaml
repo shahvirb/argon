@@ -1,3 +1,5 @@
+name: stack-joplinserver_argon
+
 services:
   joplinpostgresdb:
     container_name: joplin-db

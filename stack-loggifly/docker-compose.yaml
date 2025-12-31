@@ -1,3 +1,5 @@
+name: stack-loggifly_argon
+
 services:
   loggifly:
     container_name: loggifly

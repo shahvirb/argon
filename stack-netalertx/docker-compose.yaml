@@ -1,3 +1,5 @@
+name: stack-netalertx_argon
+
 services:
   netalertx:
     container_name: netalertx

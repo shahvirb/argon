@@ -1,16 +1,20 @@
 {
-	acme_dns cloudflare {env.CF_DNS_ZONE_API_KEY}
+	acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN}
 	auto_https prefer_wildcard
 	email shahvirb@gmail.com
 	dynamic_dns {
-		provider cloudflare {env.CF_DNS_ZONE_API_KEY}
+		provider cloudflare {env.CLOUDFLARE_API_TOKEN}
 		domains {
-			fdatxvault.win
+			fdatxvault.win @
 		}
+		versions ipv4
 	}
 }
 
 *.fdatxvault.win {
+    tls {
+        dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+    }
 }
 
 audio.fdatxvault.win {
@@ -23,11 +27,11 @@ authentik.fdatxvault.win {
 }
 
 fdatxvault.win {
-	reverse_proxy argon:8013
+	reverse_proxy localhost:8013
 }
 
 joplinserver.fdatxvault.win {
-	reverse_proxy argon:22300
+	reverse_proxy localhost:22300
 }
 
 # kw.fdatxvault.win {
@@ -40,7 +44,7 @@ joplinserver.fdatxvault.win {
 # }
 
 openproject.fdatxvault.win {
-	reverse_proxy argon:8079 {
+	reverse_proxy localhost:8079 {
 	    # The following directives are needed to make the proxy forward explicitly the X-Forwarded-* headers. If unset,
 	    # Caddy will reset them. See: https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#defaults
 	    # This is needed, if you are using a reverse proxy in front of the compose stack and Caddy is NOT your first
@@ -58,11 +62,11 @@ photos.fdatxvault.win {
 }
 
 recipes.fdatxvault.win {
-	reverse_proxy argon:8014
+	reverse_proxy localhost:8014
 }
 
 vikunja.fdatxvault.win {
-	reverse_proxy argon:3456
+	reverse_proxy localhost:3456
 }
 
 whoami.fdatxvault.win {

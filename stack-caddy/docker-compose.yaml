@@ -1,0 +1,33 @@
+services:
+  caddy:
+    build: 
+      context: .
+    container_name: caddy
+    network_mode: "host"
+    dns_search:
+      - fdatxvault.win
+    environment:
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - TZ=${TZ}
+    env_file:
+      - secrets-cloudflare.env
+    image: mycaddy
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
+    # ports:
+    #   - 80:80
+    #   - 443:443
+    #   - 443:443/udp
+    restart: unless-stopped
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ${DOCKERDATADIR}/caddy/config:/config
+      - ${DOCKERDATADIR}/caddy/data:/data
+
+  whoami:
+    container_name: whoami
+    image: traefik/whoami
+    ports:
+      - 44405:80
+    restart: unless-stopped

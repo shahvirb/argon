@@ -1,0 +1,75 @@
+{
+	acme_dns cloudflare {env.CF_DNS_ZONE_API_KEY}
+	auto_https prefer_wildcard
+	email shahvirb@gmail.com
+	dynamic_dns {
+		provider cloudflare {env.CF_DNS_ZONE_API_KEY}
+		domains {
+			fdatxvault.win
+		}
+	}
+}
+
+*.fdatxvault.win {
+}
+
+audio.fdatxvault.win {
+	encode gzip zstd
+	reverse_proxy mediaserver2:13378
+}
+
+authentik.fdatxvault.win {
+	reverse_proxy helium:9000
+}
+
+fdatxvault.win {
+	reverse_proxy argon:8013
+}
+
+joplinserver.fdatxvault.win {
+	reverse_proxy argon:22300
+}
+
+# kw.fdatxvault.win {
+# 	reverse_proxy https://kasm.fdatxvault.win {
+# 		transport http {
+# 			# tls
+# 			tls_insecure_skip_verify
+# 		}
+# 	}
+# }
+
+openproject.fdatxvault.win {
+	reverse_proxy argon:8079 {
+	    # The following directives are needed to make the proxy forward explicitly the X-Forwarded-* headers. If unset,
+	    # Caddy will reset them. See: https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#defaults
+	    # This is needed, if you are using a reverse proxy in front of the compose stack and Caddy is NOT your first
+	    # point of contact.
+	    # When using Caddy is reachable as a first point of contact, it is highly recommended to configure the server's
+	    # global `trusted_proxies` directive. See: https://caddyserver.com/docs/caddyfile/options#trusted-proxies
+	
+	    header_up X-Forwarded-Proto {header.X-Forwarded-Proto}
+	    header_up X-Forwarded-For {header.X-Forwarded-For}
+	}
+}
+
+photos.fdatxvault.win {
+	reverse_proxy mediaserver2:2283
+}
+
+recipes.fdatxvault.win {
+	reverse_proxy argon:8014
+}
+
+vikunja.fdatxvault.win {
+	reverse_proxy argon:3456
+}
+
+whoami.fdatxvault.win {
+	reverse_proxy localhost:44405
+}
+
+xc.fdatxvault.win {
+	# abort /output/m3u
+	reverse_proxy mediaserver2:9191
+}

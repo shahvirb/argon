@@ -9,29 +9,44 @@ files_on_host = true
 
 
 [[stack]]
-name = "stack-dockge_argon"
+name = "stack-caddy_argon"
 
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
-run_directory = "/home/shahvirb/gitsource/argon/stack-dockge"
-git_provider = "github.com"
-repo = "shahvirb/stack-dockge"
-clone_path = "/home/shahvirb/gitsource/argon/stack-dockge"
-
-
-[[stack]]
-name = "stack-forgejo_argon"
-
-[stack.config]
-server = "argon"
-file_paths = [ "docker-compose.yaml" ]
-run_directory = "/home/shahvirb/gitsource/argon/stack-forgejo"
+run_directory = "/home/shahvirb/gitsource/argon/stack-caddy"
 files_on_host = true
+auto_pull = false
 
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+# [[stack]]
+# name = "stack-dockge_argon"
+
+# [stack.config]
+# server = "argon"
+# file_paths = [ "docker-compose.yaml" ]
+# run_directory = "/home/shahvirb/gitsource/argon/stack-dockge"
+# git_provider = "github.com"
+# repo = "shahvirb/stack-dockge"
+# clone_path = "/home/shahvirb/gitsource/argon/stack-dockge"
+
+
+# [[stack]]
+# name = "stack-forgejo_argon"
+
+# [stack.config]
+# server = "argon"
+# file_paths = [ "docker-compose.yaml" ]
+# run_directory = "/home/shahvirb/gitsource/argon/stack-forgejo"
+# files_on_host = true
+
+# [stack.config.pre_deploy]
+# path = ""
+# command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]

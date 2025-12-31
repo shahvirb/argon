@@ -1,0 +1,17 @@
+services:
+  step-ca:
+    image: smallstep/step-ca:latest
+    container_name: step-ca
+    ports:
+      - "9000:9000"
+    volumes:
+      - ${DOCKERDATADIR}/step:/home/step
+    environment:
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - DOCKER_STEPCA_INIT_NAME=fdatxvault.win
+      - DOCKER_STEPCA_INIT_DNS_NAMES=localhost,step-ca,argon,fdatxvault.win
+    restart: unless-stopped
+
+volumes:
+  step:

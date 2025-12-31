@@ -217,6 +217,16 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
+name = "stack-step_argon"
+
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-step"
+files_on_host = true
+
+
+[[stack]]
 name = "stack-tandoor_argon"
 
 [stack.config]

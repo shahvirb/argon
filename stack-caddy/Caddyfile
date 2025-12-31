@@ -9,6 +9,9 @@
 		}
 		versions ipv4
 	}
+	servers :443 {
+		strict_sni_host insecure_off
+	}
 }
 
 *.fdatxvault.win {
@@ -56,6 +59,18 @@ openproject.fdatxvault.win {
 	    header_up X-Forwarded-For {header.X-Forwarded-For}
 	}
 }
+
+paperless.fdatxvault.win {
+    tls /certs/argon.crt /certs/argon.key {
+        protocols tls1.3
+        client_auth {
+            mode require_and_verify
+            trusted_ca_cert_file /certs/root_ca.crt
+        }
+    }
+	reverse_proxy localhost:8000
+}
+
 
 photos.fdatxvault.win {
 	reverse_proxy mediaserver2:2283

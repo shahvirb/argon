@@ -24,6 +24,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ${DOCKERDATADIR}/caddy/config:/config
       - ${DOCKERDATADIR}/caddy/data:/data
+      - ${DOCKERDATADIR}/caddy/certs:/certs:ro
 
   whoami:
     container_name: whoami

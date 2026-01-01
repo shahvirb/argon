@@ -109,6 +109,20 @@ auto_pull = false
 
 
 [[stack]]
+name = "stack-loggifly_mediaserver2"
+
+[stack.config]
+server = "mediaserver2"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-loggifly"
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+
+[[stack]]
 name = "stack-plex_mediaserver2"
 
 [stack.config]

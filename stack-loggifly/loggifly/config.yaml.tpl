@@ -9,6 +9,11 @@
 
 
 containers:
+  caddy:
+    keywords:
+    - regex: '^\{"level":"error".*"msg":"(?P<error_msg>[^"]+)"'
+      template: '{error_msg}'
+      
   homepage:
   resticprofile:
   unifi-network-application:

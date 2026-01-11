@@ -22,8 +22,8 @@ find . -type f -name "docker-compose.yaml" ! -path "*/.git/*" | while read -r co
         continue
     fi
     
-    # Expected name line
-    name_line="name: ${dir_name}_argon"
+    hostname=$(hostname)
+    name_line="name: ${dir_name}_${hostname}"
     
     # Check if the file already has a name: line
     if grep -q "^name:" "$compose_file"; then

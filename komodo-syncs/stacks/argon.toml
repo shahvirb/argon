@@ -1,4 +1,27 @@
 [[stack]]
+name = "stack-beacon_argon"
+
+# Uncomment this for git based method
+# [stack.config]
+# server = "argon"
+# file_paths = [ "docker-compose.yaml" ]
+# run_directory = "/home/shahvirb/gitsource/argon/stack-beacon"
+# git_provider = "github.com"
+# repo = "shahvirb/stack-beacon"
+# clone_path = "/home/shahvirb/gitsource/argon/stack-beacon"
+
+# Uncomment this for file based method
+[stack.config]
+server = "argon"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/argon/stack-beacon"
+files_on_host = true
+
+[stack.config.pre_deploy]
+path = ""
+command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+
+[[stack]]
 name = "stack-changedetection_argon"
 
 [stack.config]

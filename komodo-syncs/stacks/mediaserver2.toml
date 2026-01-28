@@ -1,6 +1,5 @@
 [[stack]]
 name = "stack-audiobookshelf_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -10,13 +9,11 @@ files_on_host = true
 
 [[stack]]
 name = "stack-cronicle_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-cronicle"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -24,13 +21,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-dispatcharr_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-dispatcharr"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -38,7 +33,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 # [[stack]]
 # name = "stack-epicgames_mediaserver2"
-
 # [stack.config]
 # server = "mediaserver2"
 # file_paths = [ "docker-compose.yaml" ]
@@ -48,13 +42,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-frigate_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-frigate"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -62,7 +54,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-glances_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -74,20 +65,17 @@ clone_path = "/home/shahvirb/gitsource/mediaserver2/stack-glances"
 
 [[stack]]
 name = "stack-immich_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-immich"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 # [[stack]]
 # name = "stack-jdownloader2_mediaserver2"
-
 # [stack.config]
 # server = "mediaserver2"
 # file_paths = [ "docker-compose.yaml" ]
@@ -97,7 +85,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-komodo-stack-gen_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -110,13 +97,11 @@ auto_pull = false
 
 [[stack]]
 name = "stack-loggifly_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-loggifly"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -124,13 +109,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-plex_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-plex"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -138,7 +121,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-prowlarr_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -148,7 +130,6 @@ files_on_host = true
 
 [[stack]]
 name = "stack-radarr_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -158,13 +139,11 @@ files_on_host = true
 
 [[stack]]
 name = "stack-recyclarr_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-recyclarr"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -172,13 +151,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-resticbackup_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-resticbackup"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -186,7 +163,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-smbcheck_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -197,7 +173,6 @@ auto_pull = false
 
 [[stack]]
 name = "stack-sonarr_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -207,7 +182,6 @@ files_on_host = true
 
 [[stack]]
 name = "stack-tautulli_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
@@ -217,13 +191,11 @@ files_on_host = true
 
 [[stack]]
 name = "stack-torrent_mediaserver2"
-
 [stack.config]
 server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-torrent"
 files_on_host = true
-
 [stack.config.pre_deploy]
 path = ""
 command = "/home/shahvirb/gitsource/utils/op-unpack.sh"

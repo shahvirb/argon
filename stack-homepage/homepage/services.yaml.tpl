@@ -217,6 +217,9 @@
             type: paperlessngx
             url: http://argon:8000
             key: op://Dev - Home Lab/Paperless/homepage api key
+    - Proxmox Backup Server:
+        icon: proxmox.png
+        href: https://proxmox-backup-server:8007/
 
 - Web:
     - Audiobookshelf:

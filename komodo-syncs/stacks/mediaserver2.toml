@@ -183,4 +183,6 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-torrent"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+auto_update = true
+auto_update_all_services = true
+destroy_before_deploy = true # This is likely unnecessary but added as a VPN precaution

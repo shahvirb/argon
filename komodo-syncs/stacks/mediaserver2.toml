@@ -5,7 +5,8 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-audiobookshelf"
 files_on_host = true
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-cronicle_mediaserver2"
@@ -15,7 +16,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-cronicle"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-dispatcharr_mediaserver2"
@@ -46,7 +48,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-frigate"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-glances_mediaserver2"
@@ -57,7 +60,8 @@ run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-glances"
 git_provider = "github.com"
 repo = "shahvirb/stack-glances"
 clone_path = "/home/shahvirb/gitsource/mediaserver2/stack-glances"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-immich_mediaserver2"
@@ -67,6 +71,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-immich"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+poll_for_updates = true
+auto_update = true
 
 # [[stack]]
 # name = "stack-jdownloader2_mediaserver2"
@@ -75,7 +81,8 @@ pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 # file_paths = [ "docker-compose.yaml" ]
 # run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-jdownloader2"
 # files_on_host = true
-
+# poll_for_updates = true
+# auto_update = true
 
 [[stack]]
 name = "stack-komodo-stack-gen_mediaserver2"
@@ -97,7 +104,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-loggifly"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-plex_mediaserver2"
@@ -107,7 +115,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-plex"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-prowlarr_mediaserver2"
@@ -116,7 +125,8 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-prowlarr"
 files_on_host = true
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-radarr_mediaserver2"
@@ -125,7 +135,8 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-radarr"
 files_on_host = true
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-recyclarr_mediaserver2"
@@ -135,7 +146,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-recyclarr"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-resticbackup_mediaserver2"
@@ -145,7 +157,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-resticbackup"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-smbcheck_mediaserver2"
@@ -164,7 +177,8 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-sonarr"
 files_on_host = true
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-tautulli_mediaserver2"
@@ -173,7 +187,8 @@ server = "mediaserver2"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-tautulli"
 files_on_host = true
-
+poll_for_updates = true
+auto_update = true
 
 [[stack]]
 name = "stack-torrent_mediaserver2"

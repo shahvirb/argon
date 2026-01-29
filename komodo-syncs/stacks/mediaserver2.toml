@@ -25,6 +25,8 @@ file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-dispatcharr"
 files_on_host = true
 pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+poll_for_updates = true
+auto_update = true
 
 
 # [[stack]]

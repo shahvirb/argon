@@ -2,7 +2,7 @@
 name = "stack-beacon_argon"
 
 # Uncomment this for git based method
-# [stack.config]
+#[stack.config]
 # server = "argon"
 # file_paths = [ "docker-compose.yaml" ]
 # run_directory = "/home/shahvirb/gitsource/argon/stack-beacon"
@@ -10,20 +10,15 @@ name = "stack-beacon_argon"
 # repo = "shahvirb/stack-beacon"
 # clone_path = "/home/shahvirb/gitsource/argon/stack-beacon"
 
-# Uncomment this for file based method
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-beacon"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-changedetection_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -33,22 +28,17 @@ files_on_host = true
 
 [[stack]]
 name = "stack-caddy_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-caddy"
 files_on_host = true
 auto_pull = false
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 # [[stack]]
 # name = "stack-dockge_argon"
-
 # [stack.config]
 # server = "argon"
 # file_paths = [ "docker-compose.yaml" ]
@@ -60,13 +50,11 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 # [[stack]]
 # name = "stack-forgejo_argon"
-
 # [stack.config]
 # server = "argon"
 # file_paths = [ "docker-compose.yaml" ]
 # run_directory = "/home/shahvirb/gitsource/argon/stack-forgejo"
 # files_on_host = true
-
 # [stack.config.pre_deploy]
 # path = ""
 # command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
@@ -74,62 +62,45 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-joplinserver_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-joplinserver"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-homepage_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-homepage"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-kestra_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-kestra"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-komodo_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-komodo"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 # [[stack]]
 # name = "stack-komodo-stack-gen_argon"
-
 # [stack.config]
 # server = "argon"
 # file_paths = [ "docker-compose.yaml" ]
@@ -140,7 +111,6 @@ command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 [[stack]]
 name = "stack-komodo-stack-gen_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -151,21 +121,16 @@ auto_pull = false
 
 [[stack]]
 name = "stack-loggifly_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-loggifly"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-netalertx_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -175,21 +140,16 @@ files_on_host = true
 
 [[stack]]
 name = "stack-openproject_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-openproject"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-openwebui_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -199,49 +159,36 @@ files_on_host = true
 
 [[stack]]
 name = "stack-paperless_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-paperless"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-resticprofile_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-resticprofile"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-scrutiny_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-scrutiny"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-step_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -251,35 +198,26 @@ files_on_host = true
 
 [[stack]]
 name = "stack-tandoor_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-tandoor"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-unifinetwork_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-unifinetwork"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-uptimekuma_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -289,35 +227,26 @@ files_on_host = true
 
 [[stack]]
 name = "stack-vaultwarden_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-vaultwarden"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-vikunja_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
 run_directory = "/home/shahvirb/gitsource/argon/stack-vikunja"
 files_on_host = true
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 
 
 [[stack]]
 name = "stack-watchtower_argon"
-
 [stack.config]
 server = "argon"
 file_paths = [ "docker-compose.yaml" ]
@@ -325,8 +254,5 @@ run_directory = "/home/shahvirb/gitsource/argon/stack-watchtower"
 git_provider = "github.com"
 repo = "shahvirb/stack-watchtower"
 clone_path = "/home/shahvirb/gitsource/argon/stack-watchtower"
-
-[stack.config.pre_deploy]
-path = ""
-command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 

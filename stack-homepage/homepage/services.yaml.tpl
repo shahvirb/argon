@@ -134,16 +134,6 @@
             key: op://Dev - Home Lab/Tautulli/homepage api key
 
 - System Monitoring:
-    - Glances (helium):
-        href: http://helium:61208
-        widget:
-          type: glances
-          url: http://helium.fdatxvault.win:61208
-          version: 4 # required only if running glances v4 or higher, defaults to 3
-          metric: info
-          diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
-          refreshInterval: 5000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
-          pointsLimit: 15 # optional, defaults to 15
     - Glances (mediaserver2):
         href: http://mediaserver2:61208
         widget:
@@ -154,28 +144,6 @@
           diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
           refreshInterval: 5000 # optional - in milliseconds, defaults to 1000 or more, depending on the metric
           pointsLimit: 15 # optional, defaults to 15
-
-- Metrics & Analytics:
-    - Grafana:
-        icon: grafana.png
-        href: http://helium:3000
-        description: Analytics & Monitoring
-    - InfluxDB:
-        icon: influxdb.png
-        href: http://helium:8086
-        description: Time Series Database
-    - Prometheus (helium):
-        icon: prometheus.png
-        href: http://helium:9090
-        description: Monitoring System & Time Series Database
-    - Prometheus (monitor):
-        icon: prometheus.png
-        href: http://monitor:9090
-        description: Monitoring System & Time Series Database
-    - Prometheus Pushgateway (helium):
-        icon: prometheus.png
-        href: http://helium:9091
-        description: Intermediate Service for Prometheus
 
 - Infrastructure Monitoring:
     - Komodo:
@@ -190,10 +158,6 @@
         icon: scrutiny.png
         href: http://argon:8100
         description: WebUI for S.M.A.R.T monitoring
-    - Smokeping:
-        icon: smokeping.png
-        href: http://helium:8996
-        description: Network Latency Measurements
 
 - Other:
     - AdGuard Home:

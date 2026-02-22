@@ -35,6 +35,14 @@ services:
       - ./litellm-config.yaml:/app/config.yaml
       # - ${DOCKERDATADIR}/litellm/config:/app/config
     command: ["--config", "/app/config.yaml", "--port", "4000", "--num_workers", "1"]
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   open-webui:
     container_name: open-webui

@@ -21,7 +21,7 @@ model_list:
   - model_name: gemini-2.5-pro
     litellm_params:
       model: gemini/gemini-2.5-pro
-      api_key: op://Dev - Home Lab/openwebui argon/gemini API key]
+      api_key: op://Dev - Home Lab/openwebui argon/gemini API key
   - model_name: gemini-3-pro-preview
     litellm_params:
       model: gemini/gemini-3-pro-preview

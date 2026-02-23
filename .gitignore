@@ -11,7 +11,6 @@ stack-komodo/compose.env
 stack-loggifly/loggifly/config.yaml
 stack-openproject/.env
 stack-openwebui/app.env
-stack-openwebui/litellm-config.yaml
 stack-paperless/secrets-paperless.env
 stack-resticprofile/pw.key
 stack-scrutiny/scrutiny.yaml

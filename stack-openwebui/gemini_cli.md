@@ -8,7 +8,7 @@ This project sets up a local environment for running Open-WebUI with LiteLLM, us
   - `db`: A PostgreSQL database for storing data.
   - `litellm`: A proxy for Large Language Models (LLMs), configured to use a Gemini model.
   - `open-webui`: A web interface for interacting with LLMs.
-- `litellm-config.yaml`: Configuration file for LiteLLM. It defines the LLM models to be used. In this case, it's configured to use `gemini/gemini-2.5-flash-lite`.
+- `litellm-config.yaml`: Configuration file for LiteLLM.
 - `app.env`: An environment file to store secrets and other configuration variables for the services.
 
 ## How to run

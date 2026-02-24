@@ -28,6 +28,7 @@ services:
     environment:
       - TZ=${TZ}
       - PORT=4000
+      - SEARXNG_API_BASE=http://searxng:8080
     ports:
       - "4000:4000"
     restart: unless-stopped
@@ -51,10 +52,24 @@ services:
       - TZ=${TZ}
       - PUID=${PUID}
       - PGID=${PGID}
-      - WEBUI_AUTH="False"
+      - WEBUI_AUTH="True"
     ports:
       - "3001:8080"
     restart: unless-stopped
     volumes:
       - ${DOCKERDATADIR}/open-webui/ollama:/root/.ollama
       - ${DOCKERDATADIR}/open-webui/data:/app/backend/data
+
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    restart: unless-stopped
+    ports:
+      - 8888:8080
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    env_file:
+      - app.env
+    environment:
+      - SEARXNG_BASE_URL=http://argon:8888/
+      - TZ=${TZ}

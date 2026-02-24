@@ -1,0 +1,28 @@
+# SearxNG settings file
+# For more information, see: https://docs.searxng.org/admin/settings/settings.html
+
+use_default_settings:
+  engines:
+    remove:
+      - google
+
+search:
+  language: en
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "${SEARXNG_SECRET_KEY}"
+
+engines:
+  # By default, no engines are enabled.
+  # Here we enable a few common ones.
+  # You can find a full list here: https://docs.searxng.org/user/configured_engines.html
+  - name: duckduckgo
+    enabled: true
+    categories: [general]
+  - name: wikipedia
+    enabled: true
+    categories: [general]
+

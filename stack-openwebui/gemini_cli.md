@@ -13,9 +13,7 @@ This project sets up a local environment for running Open-WebUI with LiteLLM, us
 
 ## How to run
 
-1. First, unpack the files using `../../utils/op-unpack.sh`.
-2.  Create a `.env` file with the required environment variables (you can use `app.env` as a template).
-3.  Run `docker-compose up -d` to start the services in detached mode.
+If the user asks you to apply changes you will first need to `../../utils/op-unpack.sh`, then run `docker compose up -d --force-recreate`.
 
 - The Open-WebUI will be available at `http://argon:3001`.
 - The LiteLLM API will be available at `http://argon:4000`.

@@ -201,3 +201,15 @@ pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"
 auto_update = true
 auto_update_all_services = true
 destroy_before_deploy = true # This is likely unnecessary but added as a VPN precaution
+
+[[stack]]
+name = "stack-watchtower_mediaserver2"
+[stack.config]
+server = "mediaserver2"
+file_paths = [ "docker-compose.yaml" ]
+run_directory = "/home/shahvirb/gitsource/mediaserver2/stack-watchtower"
+# git_provider = "github.com"
+files_on_host = true
+repo = "shahvirb/stack-watchtower"
+clone_path = "/home/shahvirb/gitsource/mediaserver2/stack-watchtower"
+pre_deploy.command = "/home/shahvirb/gitsource/utils/op-unpack.sh"

@@ -71,6 +71,10 @@
         icon: dispatcharr.png
         href: http://mediaserver2:9191
         description: IPTV
+    - Teamarr:
+        # icon: teamarr.png
+        href: http://mediaserver2:9196
+        description: Arr for sports
     - JDownloader2:
         icon: jdownloader2.png
         href: http://mediaserver2:5800

@@ -29,3 +29,5 @@ layout:
       tab: Monitoring
   - Infrastructure Monitoring:
       tab: Monitoring
+  - AI:
+      tab: AI

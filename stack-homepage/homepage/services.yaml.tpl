@@ -221,3 +221,22 @@
         icon: vikunja.png
         href: https://vikunja.fdatxvault.win
         description: To-do
+
+- AI:
+    - Open Web UI:
+        icon: openai.png
+        href: http://argon:3001
+        description: ChatGPT UI with Ollama
+    - LiteLLM:
+        icon: mdi:brain
+        href: http://argon:4000
+        description: LLM Gateway
+    - Codenomad (argon):
+        icon: mdi:robot
+        href: https://argon:9898
+    - Codenomad (mediaserver2):
+        icon: mdi:robot
+        href: https://mediaserver2:9898
+    - OpenCode Zen:
+        icon: mdi:meditation
+        href: http://opencode.ai/zen

@@ -84,6 +84,6 @@ services:
       - mcpo.env
     volumes:
       - ./mcpo-config.json:/app/config.json:ro
-    command: ["--config", "/app/config.json", "--hot-reload", "--api-key", "${MCPO_API_KEY}"]
+    command: ["--config", "/app/config.json", "--hot-reload"]
     depends_on:
       - open-webui

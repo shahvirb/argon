@@ -73,3 +73,17 @@ services:
     environment:
       - SEARXNG_BASE_URL=http://argon:8888/
       - TZ=${TZ}
+
+  mcpo:
+    image: ghcr.io/open-webui/mcpo:main
+    container_name: mcpo
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    env_file:
+      - mcpo.env
+    volumes:
+      - ./mcpo-config.json:/app/config.json:ro
+    command: ["--config", "/app/config.json", "--hot-reload", "--api-key", "${MCPO_API_KEY}"]
+    depends_on:
+      - open-webui

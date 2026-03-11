@@ -3,7 +3,6 @@
     "time": {
       "command": "uvx",
       "args": ["mcp-server-time", "--local-timezone=America/Chicago"],
-      "disabledTools": ["convert_time"]
     },
     "joplin": {
       "command": "npx",

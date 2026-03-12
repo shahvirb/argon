@@ -12,6 +12,8 @@ stack-loggifly/loggifly/config.yaml
 stack-openproject/.env
 stack-openwebui/app.env
 stack-openwebui/mcpo.env
+stack-openwebui/mcpo-config.json
+stack-openwebui/searxng/settings.yml.new
 stack-paperless/secrets-paperless.env
 stack-resticprofile/pw.key
 stack-scrutiny/scrutiny.yaml

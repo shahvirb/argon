@@ -60,6 +60,11 @@ openproject.fdatxvault.win {
 	}
 }
 
+rs.fdatxvault.win {
+	tls internal
+	reverse_proxy openmediavault:7777
+}
+
 paperless.fdatxvault.win {
     tls /certs/argon.crt /certs/argon.key {
         protocols tls1.3

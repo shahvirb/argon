@@ -188,6 +188,9 @@
     - Proxmox Backup Server:
         icon: proxmox.png
         href: https://proxmox-backup-server:8007/
+    - Restic Explorer:
+        icon: restic.png
+        href: http://argon:8822
 
 - Web:
     - Audiobookshelf:

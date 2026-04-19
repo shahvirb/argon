@@ -33,6 +33,11 @@ fdatxvault.win {
 	reverse_proxy localhost:8013
 }
 
+frigate.fdatxvault.win {
+	tls internal
+	reverse_proxy mediaserver2:5000
+}
+
 joplinserver.fdatxvault.win {
 	reverse_proxy localhost:22300
 }

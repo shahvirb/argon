@@ -14,6 +14,17 @@
 	}
 }
 
+(internal-only) {
+	tls internal
+	@internal {
+		remote_ip private_ranges
+	}
+	handle @internal {
+		reverse_proxy {args[0]}
+	}
+	respond 403
+}
+
 *.fdatxvault.win {
     tls {
         dns cloudflare {env.CLOUDFLARE_API_TOKEN}
@@ -33,10 +44,11 @@ fdatxvault.win {
 	reverse_proxy localhost:8013
 }
 
+
 frigate.fdatxvault.win {
-	tls internal
-	reverse_proxy mediaserver2:5000
+	import internal-only mediaserver2:5000
 }
+
 
 joplinserver.fdatxvault.win {
 	reverse_proxy localhost:22300
@@ -66,8 +78,7 @@ openproject.fdatxvault.win {
 }
 
 rs.fdatxvault.win {
-	tls internal
-	reverse_proxy openmediavault:7777
+	import internal-only openmediavault:7777
 }
 
 paperless.fdatxvault.win {
@@ -80,7 +91,6 @@ paperless.fdatxvault.win {
     }
 	reverse_proxy localhost:8000
 }
-
 
 photos.fdatxvault.win {
 	reverse_proxy mediaserver2:2283

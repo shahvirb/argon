@@ -1,0 +1,40 @@
+name: stack-resticexplorer_argon
+
+services:
+  resticexplorer:
+    image: tmseidel/restic-explorer:latest
+    container_name: resticexplorer
+    depends_on:
+      resticexplorer-db:
+        condition: service_healthy
+    env_file:
+      - secrets-db.env
+    environment:
+      DB_HOST: resticexplorer-db
+      DB_NAME: resticexplorer
+      DB_PORT: "5432"
+      SPRING_PROFILES_ACTIVE: docker
+      TZ: "${TZ}"
+    ports:
+      - 8822:8080
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/resticexplorer/app:/app/data
+
+  resticexplorer-db:
+    image: postgres:16-alpine
+    container_name: resticexplorer-db
+    env_file:
+      - secrets-db.env
+    environment:
+      POSTGRES_DB: resticexplorer
+      TZ: "${TZ}"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$DB_USER"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    volumes:
+      - ${DOCKERDATADIR}/resticexplorer/postgres:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro

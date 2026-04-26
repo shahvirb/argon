@@ -59,11 +59,11 @@
             key: op://Dev - Home Lab/audiobookshelf/homepage api key
     - Frigate:
         icon: frigate.png
-        href: http://mediaserver2:5000
+        href: https://frigate.fdatxvault.win
         description: NVR
         widget:
             type: frigate
-            url: http://mediaserver2.fdatxvault.win:5000
+            url: https://frigate.fdatxvault.win
             enableRecentEvents: true # Optional, defaults to false
             username: op://Dev - Home Lab/Frigate mediaserver2/username
             password: op://Dev - Home Lab/Frigate mediaserver2/password

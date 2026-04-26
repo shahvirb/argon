@@ -15,6 +15,7 @@ stack-openwebui/mcpo.env
 stack-openwebui/mcpo-config.json
 stack-openwebui/searxng/settings.yml.new
 stack-paperless/secrets-paperless.env
+stack-resticexplorer/secrets-db.env
 stack-resticprofile/pw.key
 stack-scrutiny/scrutiny.yaml
 stack-tandoor/secrets-tandoor.env

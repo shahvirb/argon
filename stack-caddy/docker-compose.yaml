@@ -27,6 +27,7 @@ services:
       - ${DOCKERDATADIR}/caddy/config:/config
       - ${DOCKERDATADIR}/caddy/data:/data
       - ${DOCKERDATADIR}/caddy/certs:/certs:ro
+      - /home/shahvirb/gitsource/natalie-car-search/serve/prod:/srv/natalie-car-search:ro
 
   whoami:
     container_name: whoami

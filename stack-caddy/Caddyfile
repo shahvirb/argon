@@ -63,6 +63,13 @@ joplinserver.fdatxvault.win {
 # 	}
 # }
 
+nv.fdatxvault.win {
+	root * /srv/natalie-car-search
+	@root path /
+	rewrite @root /dashboard.html
+	file_server
+}
+
 openproject.fdatxvault.win {
 	reverse_proxy localhost:8079 {
 	    # The following directives are needed to make the proxy forward explicitly the X-Forwarded-* headers. If unset,
@@ -98,6 +105,10 @@ photos.fdatxvault.win {
 
 recipes.fdatxvault.win {
 	reverse_proxy localhost:8014
+}
+
+seerr.fdatxvault.win {
+	reverse_proxy mediaserver2:5055
 }
 
 vikunja.fdatxvault.win {

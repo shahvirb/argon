@@ -30,8 +30,6 @@ services:
       - './profiles.yaml:/etc/resticprofile/profiles.yaml:ro'
       - './pw.key:/etc/resticprofile/pw.key:ro'
       # home job
-      - '/mnt/ServerDataBackups/argon:/mnt/ServerDataBackups/argon'
       - '/home/shahvirb:/home/shahvirb:ro'
       # paperless job
-      - '/mnt/ServerDataBackups/Paperless:/mnt/ServerDataBackups/Paperless'
       - '/mnt/Paperless:/mnt/Paperless:ro'

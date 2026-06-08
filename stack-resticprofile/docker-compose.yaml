@@ -17,6 +17,8 @@ services:
       - 'resticprofile unschedule --all && resticprofile schedule --all && crond -f'
     container_name: resticprofile
     entrypoint: '/bin/sh'
+    env_file:
+      - rs.env
     environment:
       - TZ=${TZ}
     hostname: ${HOSTNAME}

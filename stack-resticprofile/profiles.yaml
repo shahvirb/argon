@@ -19,7 +19,7 @@ home:
     schedule: "2:19"
     schedule-permission: system
   initialize: true
-  repository: "local:/mnt/ServerDataBackups/argon"
+  repository: "rest:https://{{ .Env.RESTIC_RS_USER }}:{{ .Env.RESTIC_RS_PASSWORD }}@rs.fdatxvault.win/argon"
   restic-stale-lock-age: 1h
   force-inactive-lock: true
   retention:
@@ -52,8 +52,9 @@ paperless:
   check:
     schedule: "2:07"
     schedule-permission: system
+  env-file: rs.env
   initialize: false
-  repository: "local:/mnt/ServerDataBackups/Paperless"
+  repository: "rest:https://{{ .Env.RESTIC_RS_USER }}:{{ .Env.RESTIC_RS_PASSWORD }}@rs.fdatxvault.win/Paperless"
   restic-stale-lock-age: 15m
   force-inactive-lock: true
   retention:
@@ -62,7 +63,7 @@ paperless:
     keep-daily: 60
     keep-hourly: 96
     keep-weekly: 16
-    keep-monthly: 24
+    keep-monthly: 12
     keep-within: 1d
     prune: true
     tag: true

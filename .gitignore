@@ -17,6 +17,7 @@ stack-openwebui/searxng/settings.yml.new
 stack-paperless/secrets-paperless.env
 stack-resticexplorer/secrets-db.env
 stack-resticprofile/pw.key
+stack-resticprofile/rs.env
 stack-scrutiny/scrutiny.yaml
 stack-tandoor/secrets-tandoor.env
 stack-unifinetwork/secrets.env

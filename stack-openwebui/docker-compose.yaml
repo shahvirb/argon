@@ -84,6 +84,7 @@ services:
       - mcpo.env
     volumes:
       - ./mcpo-config.json:/app/config.json:ro
+      - ${DOCKERDATADIR}/open-webui/joplin-mcp-server:/jdata
     command: ["--config", "/app/config.json", "--hot-reload"]
     depends_on:
       - open-webui

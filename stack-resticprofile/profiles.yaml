@@ -52,7 +52,6 @@ paperless:
   check:
     schedule: "2:07"
     schedule-permission: system
-  env-file: rs.env
   initialize: false
   repository: "rest:https://{{ .Env.RESTIC_RS_USER }}:{{ .Env.RESTIC_RS_PASSWORD }}@rs.fdatxvault.win/Paperless"
   restic-stale-lock-age: 15m

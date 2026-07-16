@@ -21,5 +21,6 @@ stack-resticprofile/rs.env
 stack-scrutiny/scrutiny.yaml
 stack-tandoor/secrets-tandoor.env
 stack-unifinetwork/secrets.env
+stack-uptimekuma/opencode.json
 stack-vaultwarden/secrets-bitwarden.env
 stack-vikunja/secrets-db.env

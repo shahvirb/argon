@@ -6,7 +6,8 @@ home:
     exclude-caches: true
     one-file-system: true
     schedule-permission: system
-    schedule: "*:00"
+    # Excludes 4:00-5:00 AM maintenance window (all hours except 4)
+    schedule: "0..3,5..23:00"
     send-after:
       - method: GET
         url: http://argon.fdatxvault.win:3002/api/push/fPMmwJugMx?status=up&msg=OK
@@ -39,7 +40,8 @@ paperless:
     exclude-caches: true
     one-file-system: true
     schedule-permission: system
-    schedule: "*:00,15,30,45"
+    # Excludes 4:00-5:00 AM maintenance window (all hours except 4)
+    schedule: "0..3,5..23:00,15,30,45"
     send-after:
       - method: GET
         url: http://argon.fdatxvault.win:3002/api/push/rT9gYCCQnp?status=up&msg=OK

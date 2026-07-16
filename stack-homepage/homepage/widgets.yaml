@@ -10,3 +10,12 @@
 - search:
     provider: duckduckgo
     target: _blank
+
+- openmeteo:
+    label: Austin
+    latitude: 30.3077
+    longitude: -97.7195
+    units: imperial
+    cache: 5
+    format:
+      maximumFractionDigits: 1

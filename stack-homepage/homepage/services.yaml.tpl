@@ -25,9 +25,6 @@
             url: http://homeassistant.fdatxvault.win:8123
 
 - Devices:
-    - pmx3:
-        icon: proxmox.png
-        href: https://pmx3:8006
     - Router:
         icon: router.png
         href: http://192.168.1.1
@@ -47,6 +44,35 @@
         # widget:
         #     type: moonraker
         #     url: http://192.168.1.217:10088
+
+- Proxmox:
+    - pmx3:
+        icon: proxmox.png
+        href: https://pmx3.fdatxvault.win:8006
+        widget:
+            type: proxmox
+            url: https://pmx3.fdatxvault.win:8006
+            username: op://Dev - Home Lab/pmx3/homepage api username
+            password: op://Dev - Home Lab/pmx3/homepage api token
+    - pmx4:
+        icon: proxmox.png
+        href: https://pmx4:8006
+    - pmx-yoga:
+        icon: proxmox.png
+        href: https://pmx-yoga:8006
+        widget:
+            type: proxmox
+            url: https://pmx-yoga.fdatxvault.win:8006
+            username: op://Dev - Home Lab/pmx-yoga/homepage api username
+            password: op://Dev - Home Lab/pmx-yoga/homepage api token
+    - pbs-bravo:
+        icon: proxmox.png
+        href: https://pbs-bravo:8007
+        widget:
+            type: proxmoxbackupserver
+            url: https://pbs-bravo.fdatxvault.win:8007
+            username: op://Dev - Home Lab/pbs-bravo/homepage api username
+            password: op://Dev - Home Lab/pbs-bravo/homepage api token
 
 - Media:
     - Audiobookshelf:
@@ -185,9 +211,6 @@
             type: paperlessngx
             url: http://argon:8000
             key: op://Dev - Home Lab/Paperless/homepage api key
-    - Proxmox Backup Server:
-        icon: proxmox.png
-        href: https://proxmox-backup-server:8007/
     - Restic Explorer:
         icon: restic.png
         href: http://argon:8822

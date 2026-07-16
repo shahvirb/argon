@@ -1,5 +1,8 @@
 title: "Home Lab Dashboard"
 theme: dark
+background:
+  image: https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2025/07/STScI-01JY2AYZ2PYBDDSMX83K5248DD.jpg?w=11055&h=12138&fit=crop&crop=faces%2Cfocalpoint
+  opacity: 15
 
 navbar:
   links: []
@@ -10,6 +13,8 @@ layout:
   - Health:
       tab: Default
   - Devices:
+      tab: Default
+  - Proxmox:
       tab: Default
   - Other:
       tab: Default

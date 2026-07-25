@@ -46,6 +46,7 @@ services:
       - secrets-paperless.env
     environment:
       PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_DBENGINE: postgresql
       PAPERLESS_DBHOST: db
       PAPERLESS_FILENAME_FORMAT: '{{original_name}}'
       PAPERLESS_FILENAME_FORMAT_REMOVE_NONE: True
@@ -60,7 +61,7 @@ services:
 
   gotenberg:
     container_name: paperless-gotenberg
-    image: docker.io/gotenberg/gotenberg:7.10
+    image: docker.io/gotenberg/gotenberg:8
     restart: unless-stopped
     # The gotenberg chromium route is used to convert .eml files. We do not
     # want to allow external content like tracking pixels or even javascript.

@@ -180,10 +180,10 @@
         icon: komodo.png
         href: http://argon:9120/
         description: Container Management Platform
-    - NetAlertX:
-        icon: netalertx.png
-        href: http://argon:20211
-        description: Network Device Monitoring
+    - Grafana:
+        icon: grafana.png
+        href: http://argon:3000
+        description: Analytics & Monitoring
     - Scrutiny:
         icon: scrutiny.png
         href: http://argon:8100

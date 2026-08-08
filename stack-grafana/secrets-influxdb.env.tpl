@@ -1,0 +1,5 @@
+DOCKER_INFLUXDB_INIT_USERNAME="op://Dev - Home Lab/influxdb argon/username"
+DOCKER_INFLUXDB_INIT_PASSWORD="op://Dev - Home Lab/influxdb argon/password"
+DOCKER_INFLUXDB_INIT_ORG="op://Dev - Home Lab/influxdb argon/org"
+DOCKER_INFLUXDB_INIT_BUCKET="op://Dev - Home Lab/influxdb argon/bucket"
+DOCKER_INFLUXDB_INIT_ADMIN_TOKEN="op://Dev - Home Lab/influxdb argon/admin token"
